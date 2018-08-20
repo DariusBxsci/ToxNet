@@ -7,5 +7,5 @@ friend(X, Y) :- \+(X = Y), likes(X, Z), likes(Y, Z).
 
 
 %% %Need this if building from within Sublime Text
-%% main :- likes(X,sue),
+%% main :- likes(wallace,sheep),
 %% 		writef('%t\n',[X]).
