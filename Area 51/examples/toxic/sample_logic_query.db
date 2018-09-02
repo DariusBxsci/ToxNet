@@ -1,0 +1,2 @@
+has_heart_rate(a,tachycardic)
+has_respiratory_rate(a, tachypneic)
