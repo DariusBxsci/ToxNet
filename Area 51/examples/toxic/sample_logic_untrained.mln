@@ -15,6 +15,6 @@ has_toxidrome(patient, toxidrome)
 has_respiratory_rate(patient, respiratory_rate)
 
 // formulas
-0.000000    has_heart_rate(patient, tachycardic) => has_toxidrome(patient, sympathomimetic)
-0.000000    has_heart_rate(patient, bradycardic) => has_toxidrome(patient, sympathomimetic)
-0.000000    has_heart_rate(patient, bradycardic) => has_toxidrome(patient, sedative_hypnotic)
+0.000000    has_heart_rate(x, tachycardic) => has_toxidrome(x, sympathomimetic)
+0.000000    has_heart_rate(x, bradycardic) => has_toxidrome(x, sympathomimetic)
+0.000000    has_heart_rate(x, bradycardic) => has_toxidrome(x, sedative_hypnotic)

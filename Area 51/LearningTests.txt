@@ -1,0 +1,65 @@
+SMOKING EXAMPLE:
+
+//predicate declaration:
+Friends(person, person)
+Smokes(person)
+Cancer(person)
+
+//Using this training database
+Friends(Ivan, John)
+Friends(John, Ivan)
+Friends(Katherine, Lars)
+Friends(Lars, Katherine)
+Friends(Michael, Nick)
+Friends(Nick, Michael)
+Friends(Ivan, Michael)
+Friends(Michael, Ivan)
+Smokes(Ivan)
+Smokes(Michael)
+Smokes(Nick)
+Cancer(Ivan)
+
+//The Following formulas are given using Pseudo-log likelihood
+0.522290  Smokes(x) => Cancer(x)
+1.425096  Friends(x, y) => (Smokes(x) <=> Smokes(y))
+
+
+TOXIC EXAMPLE:
+
+//predicate declarations
+Tachycardic(patient)
+Bradycardic(patient)
+Sympathomimetic(patient)
+Sedative_hypnotic(patient)
+
+//Using this training database
+Tachycardic(a)
+Sympathomimetic(a)
+Bradycardic(b)
+Sedative_hypnotic(b)
+
+//The Following formulas are given using Pseudo-log likelihood
+12.352792  Tachycardic(x) => Sympathomimetic(x)
+-12.352792  Tachycardic(x) => Sedative_hypnotic(x)
+-12.352792  Bradycardic(x) => Sympathomimetic(x)
+12.352792  Bradycardic(x) => Sedative_hypnotic(x)
+
+
+GENERALIZED TOXIC MLN? Maybe we can infer toxidrome based on matching stats of patients
+
+// predicate declarations
+SameHR(patient1,patient2)
+SameRR(patient1,patient2)
+SameTox(patient1,patient2)
+
+//Using this training database
+SameHR(a,b)
+!SameTox(a,b)
+SameRR(c,d)
+SameTox(c,d)
+
+//The Following formulas are given using Pseudo-log likelihood
+0.388324  SameHR(x, y) => SameTox(x, y)
+-0.304823  !SameHR(x, y) => SameTox(x, y)
+13.128481  SameRR(x, y) => SameTox(x, y)
+-13.044979  !SameRR(x, y) => SameTox(x, y)
