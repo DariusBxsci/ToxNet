@@ -1,11 +1,9 @@
-//Toxidromes
 Sympathomimetic(person)
 Anticholinergic(person)
 Cholinergic(person)
 Sedative_hypnotic(person)
 Opioid(person)
 
-//Attributes
 
 Tachycardic(person)
 Bradycardic(person)
@@ -29,7 +27,7 @@ Eupneic(person)
 Hyperpneic(person)
 Hypopneic(person)
 
-//Formulas:
+
 log(0.8) Sympathomimetic(person) => Tachycardic(person)
 log(0.8) Sympathomimetic(person) => Bradycardic(person)
 log(0.8) Sympathomimetic(person) => Eucardic(person)
@@ -135,4 +133,3 @@ log(0.8) Opioid(person) => Bradypneic(person)
 log(0.8) Opioid(person) => Eupneic(person)
 log(0.8) Opioid(person) => Hyperpneic(person)
 log(0.8) Opioid(person) => Hypopneic(person)
-
