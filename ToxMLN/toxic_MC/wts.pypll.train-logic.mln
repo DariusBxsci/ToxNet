@@ -1,0 +1,15 @@
+// domain declarations
+
+// predicate declarations
+Anticholinergic(person)
+Dry_skin(person)
+Mydriatic(person)
+Diaphoretic(person)
+Sympathomimetic(person)
+Tachycardic(person)
+
+// formulas
+13.736460   Sympathomimetic(x) => Tachycardic(x)
+14.047589   Sympathomimetic(x) => Diaphoretic(x)
+-0.693144   Sympathomimetic(x) => Mydriatic(x)
+13.895354   Anticholinergic(x) => (Tachycardic(x) ^ Mydriatic(x) ^ Dry_skin(x))

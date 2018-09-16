@@ -1,0 +1,20 @@
+// MLN for social networks section in tutorial
+
+// Predicate Definitions
+
+//heart rates
+Bradycardic(patient)
+Normocardic(patient)
+Tachycardic(patient)
+
+//toxidromes
+Sympathomimetic(patient)
+Anticholinergic(patient)
+Cholinergic(patient)
+Sedative_hypnotic(patient)
+
+//Then we can define a predicate like has_toxidrome() as a function of the above predicates
+
+// formulas
+0.000000 Bradycardic(patient) => Anticholinergic(patient)
+0.000000 Bradycardic(patient) => Cholinergic(patient)

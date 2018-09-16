@@ -1,0 +1,25 @@
+//domain declarations
+toxidrome = {sympathomimetic, anticholinergic, cholinergic, sedative_hypnotic, serotonin_syndrome}
+heart_rate = {bradycardic, normocardic, tachycardic}
+blood_pressure = {hypotensive, normotensive, hypertensive}
+respiratory_rate = {bradypneic,eupneic, tachypneic}
+respiratory_depth = {hypopneic, normal_depth, hyperpneic}
+moisture_of_skin = {dry, normal, diaphoretic}
+reflex_strength = {hyporeflexic, normoreflexic, hyperreflexic}
+clonus = {absent, present}
+patient = {a} //Really need to think how to name patients
+
+//predicate declarations
+has_heart_rate(patient, heart_rate)
+has_respiratory_rate(patient, respiratory_rate)
+has_toxidrome(patient,toxidrome)
+
+//Rules
+1 has_heart_rate(x, tachycardic) => has_toxidrome(x,sympathomimetic)
+1 has_heart_rate(x, bradycardic) => !has_toxidrome(x, sympathomimetic)
+1 has_heart_rate(x, bradycardic) => has_toxidrome(x, sedative_hypnotic)
+1 has_heart_rate(x, bradycardic) => !has_heart_rate(x, tachycardic)
+1 has_respiratory_rate(x, bradypneic) => !has_respiratory_rate(x, tachypneic)
+3 has_respiratory_rate(x, bradypneic) => has_toxidrome(x, sedative_hypnotic)
+3 has_respiratory_rate(x, bradypneic) => !has_toxidrome(x,sympathomimetic)
+2 has_respiratory_rate(x, tachypneic) => has_toxidrome(x, sympathomimetic)
