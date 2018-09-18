@@ -1,3 +1,5 @@
 .DS_Store
 env.sh
 Area 51/examples/.DS_Store
+test.json
+results.txt
