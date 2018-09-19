@@ -1,4 +1,4 @@
-#RUN USING: python2 generate_rules.py predicates.txt
+ #RUN USING: python2 generate_rules.py predicates.txt
 
 import random
 import sys
