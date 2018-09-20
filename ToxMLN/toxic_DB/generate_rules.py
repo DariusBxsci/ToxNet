@@ -23,7 +23,7 @@ for t in toxidromes:
 
 print (formulae_str)
 
-f = open("toxic_complete.mln",'w')
+f = open("toxic_complete_MC .mln",'w')
 f.write(formulae_str)
 f.close()
 
