@@ -1,10 +1,11 @@
  #RUN USING: python2 generate_rules.py predicates.txt
 
-import random
-import sys
+import random, sys, json 
 
 toxidromes = open(sys.argv[1],'r').read().split(":")[0].split("\n")
 attributes = open(sys.argv[1],'r').read().split(":")[1].split("\n")
+
+answer_key = {}
 
 #generate mln
 print ("//Toxidromes")
@@ -23,7 +24,7 @@ for t in toxidromes:
 
 print (formulae_str)
 
-f = open("toxic_complete_MC .mln",'w')
+f = open("toxic_complete_MC2.mln",'w')
 f.write(formulae_str)
 f.close()
 
@@ -42,6 +43,8 @@ toxidrome_attributes = { "Sympathomimetic(person)": "Bradycardic(person)", \
 for p in range(num_patients):
     tox = random.choice(list(toxidrome_attributes.keys()))
     patient = []
+
+    answer_key[p] = tox
     for s in attributes:
         #if this is a main attribute of this patient's toxidrome
         attr_prob = 0
@@ -78,5 +81,7 @@ f.write("0 Eupneic(x) <=> !Hypopneic(x) \n")
 f.write("0 Tachypneic(x) <=> !Bradypneic(x) \n")
 
 f.close()
+
+json.dump(answer_key, open('answer_key_MC.json','wb'))
 
 

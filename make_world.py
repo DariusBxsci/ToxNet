@@ -15,5 +15,9 @@ class Person(Object):
 	for key,value in kwargs.items():
 		setattr(self,key,value)
 
+
+class Sign(Object):
+	
+
 class Toxidrome(Object):
 	def (self,)
