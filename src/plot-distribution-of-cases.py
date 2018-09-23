@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd 
 
-df = pd.read_json('./world.json').transpose()
+df = pd.read_json('./data/world.json').transpose()
 sns.set(style="whitegrid")
 
 
@@ -28,4 +28,4 @@ new_ticklabels = [conversion[label] for label in a]
 ax.set_yticklabels(new_ticklabels)
 
 plt.tight_layout()
-plt.savefig("./intended-toxidrome-distribution.png",dpi=400)
+plt.savefig("./imgs/intended-toxidrome-distribution.png",dpi=400)
