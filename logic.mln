@@ -4,10 +4,11 @@ anticholinergic(person)
 cholinergic(person)
 sedative_hypnotic(person)
 serotonin_syndrome(person)
+opioid(person)
 
 //signs
 tachycardic(person)
-bardycardic(person)
+bradycardic(person)
 eucardic(person)
 
 diaphoretic(person)
@@ -71,22 +72,33 @@ log(0.8) cholinergic(x) => !febrile(x)
 log(0.8) cholinergic(x) => diaphoretic(x) 
 log(0.8) cholinergic(x) => increased_bowel_sounds(x)
 
- //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive, eupneic 
+ //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive, eupneic 
 log(0.8) sedative_hypnotic(x) => eucardic(x) 
 log(0.8) sedative_hypnotic(x) => normotensive(x) 
-log(0.8) cholinergic(x) => somnolent(x) 
-log(0.8) cholinergic(x) => !febrile(x) 
-log(0.8) cholinergic(x) => diaphoretic(x) 
-log(0.8) cholinergic(x) => increased_bowel_sounds(x)
+log(0.8) sedative_hypnotic(x) => somnolent(x) 
+log(0.8) sedative_hypnotic(x) => !febrile(x) 
+log(0.8) sedative_hypnotic(x) => !diaphoretic(x) 
+log(0.8) sedative_hypnotic(x) => !increased_bowel_sounds(x)
+
+//if you have an opioid sedative-hypnotic toxidrome, then you are tachycardic, hypertensive, eupneic 
+log(0.8) opioid(x) => eucardic(x) 
+log(0.8) opioid(x) => normotensive(x) 
+log(0.8) opioid(x) => somnolent(x) 
+log(0.8) opioid(x) => !febrile(x) 
+log(0.8) opioid(x) => !diaphoretic(x) 
+log(0.8) opioid(x) => !increased_bowel_sounds(x)
+log(0.8) opioid(x) => miotic(x)
+log(0.8) !miotic(x) => !opioid(x)
 
 //if you have serotonin syndrome, then you are hyperthermic, hypertensive, and have clonus
 log(0.8) clonus(x) => serotonin_syndrome(x)
-log(0.8) hyperthermia(x) => serotonin_syndrome(x)
+log(0.8) hyperthermic(x) => serotonin_syndrome(x)
 log(0.8) hyperreflexia(x) => serotonin_syndrome(x)
 log(0.8) serotonin_syndrome(x) => rigid(x)
+log(0.8) !clonus(x) => !serotonin_syndrome(x)
 
 //semantic closures
 0 bradycardic(x) => !tachycardic(x)
 0 tachypneic(x) => !bradypneic(x)
 0 tachypneic(x) => !eupneic(x)
-0 hyperthermix(x) => !hypothermic(x)
+0 hyperthermic(x) => !hypothermic(x)
