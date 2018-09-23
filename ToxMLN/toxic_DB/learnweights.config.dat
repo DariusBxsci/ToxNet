@@ -16,7 +16,7 @@ S'pseudo-log-likelihood'
 p7
 sS'geometry'
 p8
-V765x822+2248+231
+V765x656+601+23
 p9
 sS'db'
 p10
@@ -32,7 +32,7 @@ S'toxic_complete.mln'
 p15
 sS'output_filename'
 p16
-S'./results.mln'
+S'wts.pypll.toxic_complete-toxic_complete.mln'
 p17
 sS'pattern'
 p18

@@ -13,7 +13,7 @@ from mlnQueryTool import MLNInfer
 #Hard coding is bad; should log from cofig file
 
 DB_path = os.path.join(".","ToxMLN","toxic_DB")
-mln = os.path.join(DB_path,"wts.pypll.toxic_complete-toxic_complete.mln")
+mln = os.path.join(DB_path,"wts.pypll.toxic_complete-toxic_complete_MC2.mln")
 mrf = os.path.join(DB_path,"toxic_complete.db")
 
 queries = ["Anticholinergic","Cholinergic","Sedative_hypnotic","Opioid","Sympathomimetic"]
@@ -32,4 +32,4 @@ for method,engine in tasks:
 		allResults[query] = inf.run(mln,mrf,method,query,engine,
 			output_filename, saveResults=True, maxSteps=500)
 
-json.dump(allResults,open("test.json",'wb'))
+json.dump(allResults,open("test_made_with_answer_key.json",'wb'))
