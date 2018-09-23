@@ -1,0 +1,82 @@
+// MLN for social networks section in tutorial
+
+//Toxidromes
+Sympathomimetic(person)
+Anticholinergic(person)
+Cholinergic(person)
+Sedative_hypnotic(person)
+
+//Signs
+Tachycardic(person)
+Bardycardic(person)
+Eucardic(person)
+
+Diaphoretic(person)
+Dry_skin(person)
+
+Hypertensive(person)
+Normotensive(person)
+Hypotensive(person)
+
+Agitated(person)
+Delirious(person)
+Somnolent(person)
+
+Mydriatic(person)
+Miotic(person)
+
+Febrile(person)
+
+Decreased_bowel_sounds(person)
+Increased_bowel_sounds(person)
+
+Tachypneic(person)
+Bradypneic(person)
+
+Eupneic(person)
+
+Hyperpneic(person)
+Hypopneic(person)
+
+// Rules
+//If you have a sympathomimetic toxidrome then you are tachycardic, diaphoretic, mydriatic, agitated, hypertensive, tachypneic 
+log(0.8) Sympathomimetic(x) => Tachycardic(x) 
+log(0.8) Sympathomimetic(x) => Hypertensive(x)
+log(0.8) Sympathomimetic(x) => Agitated(x)
+log(0.8) Sympathomimetic(x) => Diaphoretic(x)
+log(0.4) Sympathomimetic(x) => Mydriatic(x)
+log(0.8) Sympathomimetic(x) => Tachypneic(x)
+log(0.8) Sympathomimetic(x) => Decreased_bowel_sounds(x)
+ 
+//If you have an anticholinergic toxidrome, then you are tachycardic, hypertensive, eupneic 
+
+log(0.8) Anticholinergic(x) => Tachycardic(x) 
+log(0.8) Anticholinergic(x) => Hypertensive(x) 
+log(0.8) Anticholinergic(x) => Delirious(x) 
+log(0.8) Anticholinergic(x) => Febrile(x) 
+log(0.8) Anticholinergic(x) => Dry_skin(x) 
+log(0.8) Anticholinergic(x) => Decreased_bowel_sounds(x)
+
+ //If you have an cholinergic toxidrome, then you are tachycardic, hypertensive, eupneic 
+
+log(0.8) Cholinergic(x) => Bradycardic(x) 
+log(0.8) Cholinergic(x) => Hypotensive(x)
+log(0.8) Cholinergic(x) => Bradypneic(x) 
+log(0.8) Cholinergic(x) => Delirious(x) 
+log(0.8) Cholinergic(x) => !Febrile(x) 
+log(0.8) Cholinergic(x) => Diaphoretic(x) 
+log(0.8) Cholinergic(x) => Increased_bowel_sounds(x)
+
+ //If you have an cholinergic toxidrome, then you are tachycardic, hypertensive, eupneic 
+
+log(0.8) Sedative_hypnotic(x) => Eucardic(x) 
+log(0.8) Sedative_hypnotic(x) => Normotensive(x) 
+log(0.8) Cholinergic(x) => Somnolent(x) 
+log(0.8) Cholinergic(x) => !Febrile(x) 
+log(0.8) Cholinergic(x) => Diaphoretic(x) 
+log(0.8) Cholinergic(x) => Increased_bowel_sounds(x)
+
+//Semantic Closures
+0 Bradycardic(x) => !Tachycardic(x)
+0 Tachypneic(x) => !Bradypneic(x)
+0 Tachypneic(x) => !Eupneic(x)
