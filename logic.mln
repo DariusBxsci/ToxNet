@@ -9,13 +9,11 @@ opioid(person)
 //signs
 tachycardic(person)
 bradycardic(person)
-eucardic(person)
 
 diaphoretic(person)
 dry_skin(person)
 
 hypertensive(person)
-normotensive(person)
 hypotensive(person)
 
 agitated(person)
@@ -33,8 +31,6 @@ increased_bowel_sounds(person)
 tachypneic(person)
 bradypneic(person)
 
-eupneic(person)
-
 hyperpneic(person)
 hypopneic(person)
 
@@ -44,6 +40,8 @@ rigid(person)
 
 hyperthermic(person)
 hypothermic(person)
+
+urinary_retention(person)
 
 // rules
 //if you have a sympathomimetic toxidrome then you are tachycardic, diaphoretic, mydriatic, agitated, hypertensive, tachypneic 
@@ -55,34 +53,33 @@ log(0.4) sympathomimetic(x) => mydriatic(x)
 log(0.8) sympathomimetic(x) => tachypneic(x)
 log(0.8) sympathomimetic(x) => decreased_bowel_sounds(x)
  
-//if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive, eupneic 
-log(0.8) anticholinergic(x) => tachycardic(x) 
+//if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive 
+0 anticholinergic(x) => tachycardic(x) 
 log(0.8) anticholinergic(x) => hypertensive(x) 
 log(0.8) anticholinergic(x) => delirious(x) 
 log(0.8) anticholinergic(x) => febrile(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
+log(0.8) anticholinergic(x) => urinary_retention(x) 
 log(0.8) anticholinergic(x) => decreased_bowel_sounds(x)
 
- //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive, eupneic 
+ //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) cholinergic(x) => bradycardic(x) 
 log(0.8) cholinergic(x) => hypotensive(x)
-log(0.8) cholinergic(x) => bradypneic(x) 
+log(0.8) cholinergic(x) => bradypneic(x)
 log(0.8) cholinergic(x) => delirious(x) 
 log(0.8) cholinergic(x) => !febrile(x) 
 log(0.8) cholinergic(x) => diaphoretic(x) 
 log(0.8) cholinergic(x) => increased_bowel_sounds(x)
 
- //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive, eupneic 
-log(0.8) sedative_hypnotic(x) => eucardic(x) 
-log(0.8) sedative_hypnotic(x) => normotensive(x) 
+ //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive 
+log(0.8) hypertensive(x) => !sedative_hypnotic(x) 
 log(0.8) sedative_hypnotic(x) => somnolent(x) 
 log(0.8) sedative_hypnotic(x) => !febrile(x) 
 log(0.8) sedative_hypnotic(x) => !diaphoretic(x) 
 log(0.8) sedative_hypnotic(x) => !increased_bowel_sounds(x)
 
-//if you have an opioid sedative-hypnotic toxidrome, then you are tachycardic, hypertensive, eupneic 
-log(0.8) opioid(x) => eucardic(x) 
-log(0.8) opioid(x) => normotensive(x) 
+//if you have an opioid sedative-hypnotic toxidrome, then you are tachycardic, hypertensive
+log(0.8) hypertensive(x) => !opioid(x) 
 log(0.8) opioid(x) => somnolent(x) 
 log(0.8) opioid(x) => !febrile(x) 
 log(0.8) opioid(x) => !diaphoretic(x) 
@@ -100,5 +97,4 @@ log(0.8) !clonus(x) => !serotonin_syndrome(x)
 //semantic closures
 0 bradycardic(x) => !tachycardic(x)
 0 tachypneic(x) => !bradypneic(x)
-0 tachypneic(x) => !eupneic(x)
 0 hyperthermic(x) => !hypothermic(x)
