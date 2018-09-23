@@ -23,21 +23,27 @@ somnolent(person)
 mydriatic(person)
 miotic(person)
 
-febrile(person)
-
 decreased_bowel_sounds(person)
 increased_bowel_sounds(person)
 
 tachypneic(person)
 bradypneic(person)
 
+/*
+Should add these two axioms. 
+The depth of breathing is different to the rate of breathing. 
+Omitted it from the first version as pathological alteration of the depth of breathing is discussed in clinical settings
+less frequently than the pathological alteration of the rate of breathing.
+
 hyperpneic(person)
 hypopneic(person)
+*/
 
 clonus(person)
 hyperreflexia(person)
 rigid(person)
 
+//This version omits febrile. TODO: Introduce and distinguish between hyperthermic and febrile.
 hyperthermic(person)
 hypothermic(person)
 
@@ -57,7 +63,7 @@ log(0.8) sympathomimetic(x) => decreased_bowel_sounds(x)
 0 anticholinergic(x) => tachycardic(x) 
 log(0.8) anticholinergic(x) => hypertensive(x) 
 log(0.8) anticholinergic(x) => delirious(x) 
-log(0.8) anticholinergic(x) => febrile(x) 
+log(0.8) anticholinergic(x) => hyperthermic(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
 log(0.8) anticholinergic(x) => urinary_retention(x) 
 log(0.8) anticholinergic(x) => decreased_bowel_sounds(x)
@@ -67,23 +73,22 @@ log(0.8) cholinergic(x) => bradycardic(x)
 log(0.8) cholinergic(x) => hypotensive(x)
 log(0.8) cholinergic(x) => bradypneic(x)
 log(0.8) cholinergic(x) => delirious(x) 
-log(0.8) cholinergic(x) => !febrile(x) 
+log(0.8) cholinergic(x) => !hyperthermic(x) 
 log(0.8) cholinergic(x) => diaphoretic(x) 
 log(0.8) cholinergic(x) => increased_bowel_sounds(x)
 
  //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) hypertensive(x) => !sedative_hypnotic(x) 
 log(0.8) sedative_hypnotic(x) => somnolent(x) 
-log(0.8) sedative_hypnotic(x) => !febrile(x) 
+log(0.8) sedative_hypnotic(x) => !hyperthermic(x) 
 log(0.8) sedative_hypnotic(x) => !diaphoretic(x) 
 log(0.8) sedative_hypnotic(x) => !increased_bowel_sounds(x)
 
 //if you have an opioid sedative-hypnotic toxidrome, then you are tachycardic, hypertensive
 log(0.8) hypertensive(x) => !opioid(x) 
 log(0.8) opioid(x) => somnolent(x) 
-log(0.8) opioid(x) => !febrile(x) 
+log(0.8) opioid(x) => !hyperthermic(x) 
 log(0.8) opioid(x) => !diaphoretic(x) 
-log(0.8) opioid(x) => !increased_bowel_sounds(x)
 log(0.8) opioid(x) => miotic(x)
 log(0.8) !miotic(x) => !opioid(x)
 
