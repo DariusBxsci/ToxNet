@@ -10,21 +10,22 @@ sns.set(style="whitegrid")
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
-sns.countplot(x="intended_toxidrome", data=df)
+sns.countplot(y="intended_toxidrome", data=df, color='k')
 sns.despine(left=True, bottom=True)
 
 ax.set_ylabel("")
 ax.set_xlabel("Intended Toxidrome")
 
-a=[item.get_text() for item in ax.get_xticklabels()]
-conversion = {'sympathomimetic': "sympathomimetic",
-				'sedative_hypnotic': "sedative/hypnotic",
-				'cholinergic':"cholinergic",
-				'anticholinergic':"anticholinergic",
-				'opioid':"opioid"}
+a=[item.get_text() for item in ax.get_yticklabels()]
+conversion = {'sympathomimetic': "Sympathomimetic",
+				'sedative_hypnotic': "Sedative-Hypnotic",
+				'cholinergic':"Cholinergic",
+				'anticholinergic':"Anticholinergic",
+				'opioid':"Opioid",
+				"serotonin_syndrome":"Serotonin Syndrome"}
 
 new_ticklabels = [conversion[label] for label in a]
-ax.set_xticklabels(a)
+ax.set_yticklabels(new_ticklabels)
 
 plt.tight_layout()
 plt.savefig("./intended-toxidrome-distribution.png",dpi=400)
