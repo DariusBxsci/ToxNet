@@ -10,7 +10,7 @@ person = {"type":"patient",
 		   "difficulty":"",
 		   "presentation":[]}
 
-nPatients = 10
+nPatients = 200
 n_max_features = 5
 
 toxidromes = {'sympathomimetic':{"tachycardic": 0.6,
