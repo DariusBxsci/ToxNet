@@ -1,0 +1,28 @@
+//patient_1
+log(0.60) normotensive(patient_1)
+log(0.60) normal_size_pupils(patient_1)
+log(0.60) bradypneic(patient_1)
+log(0.60) diaphoretic(patient_1)
+log(0.60) hypotensive(patient_1)
+//patient_0
+log(0.60) tachycardic(patient_0)
+log(0.60) normotensive(patient_0)
+log(0.60) eucardic(patient_0)
+log(0.60) miotic(patient_0)
+log(0.60) hypotensive(patient_0)
+//patient_3
+log(0.60) hypertensive(patient_3)
+log(0.60) decreased_bowel_sounds(patient_3)
+log(0.60) diaphoretic(patient_3)
+log(0.60) mydriatic(patient_3)
+//patient_2
+log(0.60) tachycardic(patient_2)
+log(0.60) hypertensive(patient_2)
+log(0.60) normal_size_pupils(patient_2)
+log(0.60) dry_skin(patient_2)
+log(0.60) mydriatic(patient_2)
+//patient_4
+log(0.60) tachycardic(patient_4)
+log(0.60) decreased_bowel_sounds(patient_4)
+log(0.60) dry_skin(patient_4)
+log(0.60) mydriatic(patient_4)

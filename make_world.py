@@ -10,7 +10,7 @@ person = {"type":"patient",
 		   "difficulty":"",
 		   "presentation":[]}
 
-nPatients = 2
+nPatients = 10
 n_max_features = 5
 
 toxidromes = {'sympathomimetic':{"tachycardic": 0.6,
@@ -67,13 +67,12 @@ def make_presentation(intended_toxidrome,db):
 
 	return (difficulty, dict(intended_features + distractor_features))
 
-db = {}
+db = {n:person.copy() for n in xrange(nPatients)}
 
 for n in xrange(nPatients):
-	 db[n] = person 
-	 db[n]["name"] = str(n)
+	 db[n]["name"] = "patient_%d"%n
 	 intended_toxidrome = random.choice(toxidromes.keys())
 	 db[n]["intended_toxidrome"] = intended_toxidrome
 	 db[n]["difficulty"], db[n]["presentation"] = make_presentation(intended_toxidrome,db)
 
-json.dump(db,open("./test_DB.json","wb"))
+json.dump(db,open("./world.json","wb"))
