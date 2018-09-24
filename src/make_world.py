@@ -8,6 +8,7 @@ person = {"type":"patient",
 		   "name":"",
 		   "intended_toxidrome":"",
 		   "difficulty":"",
+		   "random_number":"",
 		   "presentation":[]}
 
 nPatients = 240
@@ -92,7 +93,7 @@ def make_presentation(intended_toxidrome,db):
 	#If 1 variable is present from the intended toxidrome, then the presentation is hard; four, easy; medium is in between
 
 
-	difficulty = random.choice(xrange(1,4))
+	difficulty = random.choice(xrange(0,3))
 	presentation = ""
 
 	n_intended_features = n_max_features - difficulty
@@ -110,12 +111,16 @@ def make_presentation(intended_toxidrome,db):
 
 	return (difficulty, intended_features + distractor_features)
 
-db = {n:person.copy() for n in xrange(nPatients)}
+db = {n:person.copy() for n in xrange(2*nPatients)}
 
-for n in xrange(nPatients):
+for n in xrange(2*nPatients):
 	 db[n]["name"] = "patient_%d"%n
 	 intended_toxidrome = random.choice(toxidromes.keys())
 	 db[n]["intended_toxidrome"] = intended_toxidrome
 	 db[n]["difficulty"], db[n]["presentation"] = make_presentation(intended_toxidrome,db)
+	 db[n]["random_number"] = random.random() #Can vectorize this if needed
 
 json.dump(db,open("./data/world.json","wb"))
+
+json.dump({key:value for key,value in db.iteritems() if value["random_number"] > 0.5},open("./data/world-train.json","wb"))
+json.dump({key:value for key,value in db.iteritems() if value["random_number"] < 0.5},open("./data/world-test.json","wb"))
