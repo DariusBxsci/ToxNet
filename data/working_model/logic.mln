@@ -58,21 +58,33 @@ log(0.8) sympathomimetic(x) => diaphoretic(x)
 log(0.4) sympathomimetic(x) => mydriatic(x)
 log(0.8) sympathomimetic(x) => tachypneic(x)
 log(0.8) sympathomimetic(x) => decreased_bowel_sounds(x)
+
+//sympathomimetic closures 
+log(0.8) bradycardic(x) => !sympathomimetic(x)
+log(0.6) hypotensive(x) => !sympathomimetic(x)
+log(0.6) miotic(x) => !sympathomimetic(x)
+log(0.6) bradypneic(x) => !sympathomimetic(x)
  
 //if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive 
 0 anticholinergic(x) => tachycardic(x) 
-log(0.8) anticholinergic(x) => hypertensive(x) 
+//log(0.8) anticholinergic(x) => hypertensive(x) 
 log(0.8) anticholinergic(x) => delirious(x) 
 log(0.8) anticholinergic(x) => hyperthermic(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
 log(0.8) anticholinergic(x) => urinary_retention(x) 
 log(0.8) anticholinergic(x) => decreased_bowel_sounds(x)
 
+//anticholinergic closures
+log(0.8) bradycardic(x) => !anticholinergic(x)
+log(0.6) diaphoretic(x) => !anticholinergic(x)
+log(0.8) hypothermic(x) => !anticholinergic(x)
+log(0.8) !urinary_retention(x) => !anticholinergic(x)
+
  //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) cholinergic(x) => bradycardic(x) 
-log(0.8) cholinergic(x) => hypotensive(x)
+//log(0.8) cholinergic(x) => hypotensive(x)
 log(0.8) cholinergic(x) => bradypneic(x)
-log(0.8) cholinergic(x) => delirious(x) 
+//log(0.8) cholinergic(x) => delirious(x) 
 log(0.8) cholinergic(x) => !hyperthermic(x) 
 log(0.8) cholinergic(x) => diaphoretic(x) 
 log(0.8) cholinergic(x) => increased_bowel_sounds(x)
@@ -91,9 +103,10 @@ log(0.8) opioid(x) => !hyperthermic(x)
 log(0.8) opioid(x) => !diaphoretic(x) 
 log(0.8) opioid(x) => miotic(x)
 log(0.8) !miotic(x) => !opioid(x)
+//log(0.8) opioid(x) => decreased_bowel_sounds(x)
 
 //if you have serotonin syndrome, then you are hyperthermic, hypertensive, and have clonus
-log(0.8) clonus(x) => serotonin_syndrome(x)
+log(0.8) clonus(x) <=> serotonin_syndrome(x)
 log(0.8) hyperthermic(x) => serotonin_syndrome(x)
 log(0.8) hyperreflexia(x) => serotonin_syndrome(x)
 log(0.8) serotonin_syndrome(x) => rigid(x)
