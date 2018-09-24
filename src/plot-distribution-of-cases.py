@@ -10,7 +10,7 @@ sns.set(style="whitegrid")
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
-sns.countplot(y="intended_toxidrome", data=df, color='k')
+sns.countplot(y="intended_toxidrome", data=df, color='k', hue='difficulty')
 sns.despine(left=True, bottom=True)
 
 ax.set_ylabel("")

@@ -10,13 +10,17 @@
 0.936200  serotonin_syndrome(patient_213)  
 """
 
-import json, ast 
+import json
 from pprint import pprint 
 
-results_file = 'small-world-test-pypll.world-train-logic.results'
+results_file = 'world-test-pypll.world-train-logic.results'
 results = [line.strip() for line in open(results_file,'rb').read().splitlines()]
 
+most_likely_toxidrome = lambda patient: patient[max(xrange(len(patient)), key=lambda index: patient[index]['probability'])]["toxidrome"]
+
 parsed_results = {}
+
+world = json.load(open("./data/world.json",'rb'))
 
 for result in results:
 	probability,toxidrome_patient = result.split()
@@ -30,7 +34,16 @@ for result in results:
  	else:
  		parsed_results[patient] = [{"toxidrome":toxidrome, "probability":float(probability)}]
 
-pprint(parsed_results)
+
+with open('./data/analysis.csv','w') as fout:
+	print>>fout,"id,predicted,actual,difficulty"
+	for name in parsed_results:
+		predicted_toxidrome = most_likely_toxidrome(parsed_results[name])
+
+		_,id = name.split("_")
+		actual_toxidrome = world[id]["intended_toxidrome"]
+		print>>fout,','.join([id,predicted_toxidrome,actual_toxidrome,str(world[id]["difficulty"])])
+
 """
 Questions that the results file are supposed to answer:
 1. What is the most likely toxidrome?
