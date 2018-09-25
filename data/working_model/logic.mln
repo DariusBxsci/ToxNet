@@ -49,9 +49,19 @@ hypothermic(person)
 
 urinary_retention(person)
 
+//rules by symptom
+log(0.8) tachycardic(x) => (sympathomimetic(x) V anticholinergic(x) V !cholinergic(x) V !sedative_hypnotic(x) V !opioid(x))
+log(0.8) bradycardic(x) => cholinergic(x) 
+log(0.8) hyperthermic(x) => (serotonin_syndrome(x) V anticholinergic(x) V sympathomimetic(x))
+
 // rules
 //if you have a sympathomimetic toxidrome then you are tachycardic, diaphoretic, mydriatic, agitated, hypertensive, tachypneic 
 log(0.8) sympathomimetic(x) => tachycardic(x) 
+/* Same as !sympathomimetic(x) V diaphoretic(x)
+   I want to say that if you are tachycardic then you have x chance of being sympathomimetic. 
+   I am not sure that the conditional probabilities have been calculated. 
+*/
+
 log(0.8) sympathomimetic(x) => hypertensive(x)
 log(0.8) sympathomimetic(x) => agitated(x)
 log(0.8) sympathomimetic(x) => diaphoretic(x)
