@@ -1,7 +1,5 @@
 #make world
-#trying to not use genDB, nothing works even after installing Jython
-import random, json 
-
+import random, json, os  
 from pprint import pprint 
 
 person = {"type":"patient",
@@ -13,42 +11,7 @@ person = {"type":"patient",
 
 nPatients = 240
 n_max_features = 5
-'''
-toxidromes = {'serotonin_syndrome':{'tachycardic',
-									 'hypertensive',
-									 'clonus',
-									  'hyperreflexia',
-									  'hyperthermia',
-				'sympathomimetic':{"tachycardic": 0.6,
-								"hypertensive",
-								"mydriatic": 0.6,
-								"diaphoretic": 0.6,
-								"decreased_bowel_sounds",
-								"tachypneic",
-				'sedative_hypnotic':{"eucardic",
-									"normotensive",
-									"normal_size_pupils",
-									"diaphoretic",
-									"decreased_bowel_sounds",
-									"bradypneic",
-				'cholinergic':{"bradycardic",
-								"hypotensive",
-								"miotic",
-								"diaphoretic",
-								"increased_bowel_sounds",
-				'anticholinergic': {"tachycardic",
-									"hypertensive",
-									"mydriatic",
-									"dry_skin",
-									"decreased_bowel_sounds",
-				'opioid':{"eucardic",
-							"normotensive",
-							"miotic",
-							"diaphoretic",
-							"decreased_bowel_sounds",
-							"bradypneic"
-							}
-'''
+DATA_PATH = os.path.join('.','data')
 
 toxidromes = {'serotonin_syndrome':['tachycardic',
 									 'hypertensive',
@@ -111,18 +74,22 @@ def make_presentation(intended_toxidrome,db):
 		distractor_features += [feature]
 		#Features in distractors carry one-quarter as much weight
 
-	return (difficulty, intended_features + distractor_features)
+	return (difficulty, list(set(intended_features + distractor_features)))
 
 db = {n:person.copy() for n in xrange(2*nPatients)}
 
 for n in xrange(2*nPatients):
+	intended_toxidrome = random.choice(toxidromes.keys())
+	
 	 db[n]["name"] = "patient_%d"%n
-	 intended_toxidrome = random.choice(toxidromes.keys())
 	 db[n]["intended_toxidrome"] = intended_toxidrome
 	 db[n]["difficulty"], db[n]["presentation"] = make_presentation(intended_toxidrome,db)
-	 db[n]["random_number"] = random.random() #Can vectorize this if needed
+	 db[n]["random_number"] = random.random() #Can vectorize this if needed	
 
-json.dump(db,open("./data/world.json","wb"))
+json.dump(db,open(os.path.join(DATA_PATH,"world.json"),"wb"))
 
-json.dump({key:value for key,value in db.iteritems() if value["random_number"] > 0.5},open("./data/world-train.json","wb"))
-json.dump({key:value for key,value in db.iteritems() if value["random_number"] < 0.5},open("./data/world-test.json","wb"))
+json.dump({key:value for key,value in db.iteritems() if value["random_number"] > 0.5},
+	  open(os.path.join(DATA_PATH,"world-train.json"),"wb"))
+
+json.dump({key:value for key,value in db.iteritems() if value["random_number"] < 0.5},
+	  open(os.path.join(DATA_PATH,"world-test.json"),"wb"))
