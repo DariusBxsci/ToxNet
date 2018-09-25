@@ -99,12 +99,19 @@ log(0.8) cholinergic(x) => !hyperthermic(x)
 log(0.8) cholinergic(x) => diaphoretic(x) 
 log(0.8) cholinergic(x) => increased_bowel_sounds(x)
 
+//cholinergic closures
+log(0.8) tachycardic(x) => !cholinergic(x)
+log(0.8) dry_skin(x) => !cholinergic(x)
+
  //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) hypertensive(x) => !sedative_hypnotic(x) 
 log(0.8) sedative_hypnotic(x) => somnolent(x) 
 log(0.8) sedative_hypnotic(x) => !hyperthermic(x) 
-log(0.8) sedative_hypnotic(x) => !diaphoretic(x) 
+//log(0.8) sedative_hypnotic(x) => !diaphoretic(x) 
 log(0.8) sedative_hypnotic(x) => !increased_bowel_sounds(x)
+
+//sedative-hypnotic closures
+log(0.8) !somnolent(x) => !sedative_hypnotic(x)
 
 //if you have an opioid sedative-hypnotic toxidrome, then you are tachycardic, hypertensive
 log(0.8) hypertensive(x) => !opioid(x) 
