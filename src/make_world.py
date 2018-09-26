@@ -24,7 +24,7 @@ toxidromes = {'serotonin_syndrome':['tachycardic',
 								"diaphoretic",
 								"agitated",
 								"decreased_bowel_sounds",
-								"tachypneic".
+								"tachypneic",
 						  		"!clonus"],
 				'sedative_hypnotic':["!hypertensive",
 									"somnolent",
@@ -80,11 +80,11 @@ db = {n:person.copy() for n in xrange(2*nPatients)}
 
 for n in xrange(2*nPatients):
 	intended_toxidrome = random.choice(toxidromes.keys())
-	
-	 db[n]["name"] = "patient_%d"%n
-	 db[n]["intended_toxidrome"] = intended_toxidrome
-	 db[n]["difficulty"], db[n]["presentation"] = make_presentation(intended_toxidrome,db)
-	 db[n]["random_number"] = random.random() #Can vectorize this if needed	
+
+	db[n]["name"] = "patient_%d"%n
+	db[n]["intended_toxidrome"] = intended_toxidrome
+	db[n]["difficulty"], db[n]["presentation"] = make_presentation(intended_toxidrome,db)
+	db[n]["random_number"] = random.random() #Can vectorize this if needed	
 
 json.dump(db,open(os.path.join(DATA_PATH,"world.json"),"wb"))
 
