@@ -78,7 +78,6 @@ log(0.6) tachycardic(x) => sympathomimetic(x)
 
 //if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive 
 0 anticholinergic(x) => tachycardic(x) 
-//log(0.8) anticholinergic(x) => hypertensive(x) 
 log(0.8) anticholinergic(x) => delirious(x) 
 log(0.8) anticholinergic(x) => hyperthermic(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
