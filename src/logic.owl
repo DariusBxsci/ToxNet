@@ -1,0 +1,256 @@
+[ {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Underlying JSON-LD for automated inference about toxicology"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#anticholinergic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#blood_pressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "blood pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#bradycardia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "bradycardia is a the state of having a pathologically slow heart rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#heart_rate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#bradypnea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "bradypnea refers to slower than usual rate of breathing due to a pathological process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_rate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#cholinergic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#cool_skin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cool skin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#temperature"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#diaphoretic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "a pathological increase in skin moisture"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#moisture"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#dry_skin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "a pathological lack of moisture in the skin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dry skin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#moisture"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#heart_rate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "heart rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#hyperpnea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "hyperpnea refers to a greater than usual depth of respiration due to a pathological process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_depth"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#hypertension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "hypertension refers to a pathologically elevated blood pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#blood_pressure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#hypopnea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "hypopnea refers to a shallower than usual depth of respiration due to a pathological process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_depth"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#hypotension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "hypertension refers to a pathologically elevated blood pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#blood_pressure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#moisture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#skin_quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#opioid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#pupil_size",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pupil size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_depth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "respiratory depth"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_function"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_function",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "respiratory function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_rate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "respiratory rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_function"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sedative_hypnotic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sedative hypnotic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#serotonin_syndrome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "serotonin syndrome"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A sign is an externally observable manifestation of a process."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#skin_quality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "skin quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sympathomimetic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#tachycardia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "tachycardia is the state of having a pathologically elevated heart rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#heart_rate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#tachypnea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "tachypnea refers to faster than usual rate of breathing due to a pathological process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#respiratory_rate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#skin_quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#toxidrome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A toxidrome is an aggregate of signs, the presence of any of which implies ingestion of a toxic amount of substance and the abseence of any of which implies implies that a toxic amount of a certain substance was not ingested."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#urinary_retention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "urinary retention"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#sign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#warm_skin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "warm skin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/mac389/ontologies/2018/8/untitled-ontology-21#temperature"
+  } ]
+} ]

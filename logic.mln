@@ -57,11 +57,6 @@ log(0.8) hyperthermic(x) => sympathomimetic(x)
 // rules
 //if you have a sympathomimetic toxidrome then you are tachycardic, diaphoretic, mydriatic, agitated, hypertensive, tachypneic 
 log(0.8) sympathomimetic(x) => tachycardic(x) 
-/* Same as !sympathomimetic(x) V diaphoretic(x)
-   I want to say that if you are tachycardic then you have x chance of being sympathomimetic. 
-   I am not sure that the conditional probabilities have been calculated. 
-*/
-
 log(0.8) sympathomimetic(x) => hypertensive(x)
 log(0.8) sympathomimetic(x) => agitated(x)
 log(0.8) sympathomimetic(x) => diaphoretic(x)
@@ -70,30 +65,49 @@ log(0.8) sympathomimetic(x) => tachypneic(x)
 log(0.8) sympathomimetic(x) => decreased_bowel_sounds(x)
 
 //sympathomimetic closures 
+//pertinent positives
+log(0.8) tachycardix(x) => sympathomimetic(x)
+log(0.8) hypertensive(x) => sympathomimetic(x)
+log(0.6) mydriatic(x) => sympathomimetic(x)
+log(0.6) diaphoretic(x) => sympathomimetic(x)
+log(0.6) tachypneic(x) => sympathomimetic(x)
+log(0.6) increased_bowel_sounds(x) => sympathomimetic(x)
+log(0.8) mydriatic(x) => sympathomimetic(x)
+
+//pertinent negatives
 log(0.8) bradycardic(x) => !sympathomimetic(x)
-log(0.6) hypotensive(x) => !sympathomimetic(x)
-log(0.6) miotic(x) => !sympathomimetic(x)
-log(0.6) bradypneic(x) => !sympathomimetic(x)
-log(0.6) tachycardic(x) => sympathomimetic(x)
+log(0.8) hypotensive(x) => !sympathomimetic(x)
+log(0.8) miotic(x) => !sympathomimetic(x)
+log(0.8) bradypneic(x) => !sympathomimetic(x)
 
 //if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive 
 0 anticholinergic(x) => tachycardic(x) 
 log(0.8) anticholinergic(x) => delirious(x) 
+log(0.8) anticholinergic(x) => mydriasis(x)
 log(0.8) anticholinergic(x) => hyperthermic(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
 log(0.8) anticholinergic(x) => urinary_retention(x) 
 log(0.8) anticholinergic(x) => decreased_bowel_sounds(x)
 
 //anticholinergic closures
+//pertinent negatives
 log(0.8) bradycardic(x) => !anticholinergic(x)
 log(0.8) tachycardic(x) => anticholinergic(x)
 log(0.6) diaphoretic(x) => !anticholinergic(x)
 log(0.8) hypothermic(x) => !anticholinergic(x)
 log(0.8) !urinary_retention(x) => !anticholinergic(x)
 
+//anticholinergic closures
+//pertinent positives
+log(0.8) deilrious(x) => anticholinergic(x)  
+log(0.8) hyperthermic(x) => anticholinergic(x) 
+log(0.8) dry_skin(x) => anticholinergic(x)  
+log(0.8) urinary_retention(x) => anticholinergic(x)  
+log(0.8) decreased_bowel_sounds(x) => anticholinergic(x)
+log(0.8) mydriasis => anticholinergic(x)  
+
  //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) cholinergic(x) => bradycardic(x) 
-log(0.8) bradycardic(x) => cholinergic(x)
 //log(0.8) cholinergic(x) => hypotensive(x)
 log(0.8) cholinergic(x) => bradypneic(x)
 //log(0.8) cholinergic(x) => delirious(x) 
@@ -102,8 +116,16 @@ log(0.8) cholinergic(x) => diaphoretic(x)
 log(0.8) cholinergic(x) => increased_bowel_sounds(x)
 
 //cholinergic closures
+//pertinent negative
 log(0.8) tachycardic(x) => !cholinergic(x)
 log(0.8) dry_skin(x) => !cholinergic(x)
+
+//cholinergic closures
+//pertinent positives
+log(0.8) bradycardic(x) => cholinergic(x)
+log(0.8) diaphoretic(x) => cholinergic(X)
+log(0.8) increased_bowel_sounds(x) => cholinergic(x)
+log(0.2) hyperthermic(x) => cholinergic(x)
 
  //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) hypertensive(x) => !sedative_hypnotic(x) 
