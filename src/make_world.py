@@ -9,7 +9,7 @@ person = {"type":"patient",
 		   "random_number":"",
 		   "presentation":[]}
 
-nPatients = 240
+nPatients = 500
 n_max_features = 5
 DATA_PATH = os.path.join('.','data')
 
