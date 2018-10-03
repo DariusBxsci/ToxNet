@@ -1,5 +1,5 @@
 #make world
-import random, json, os  
+import random, json, os, itertools  
 from pprint import pprint 
 
 person = {"type":"patient",
@@ -55,6 +55,9 @@ toxidromes = {'serotonin_syndrome':['tachycardic',
 						   "!clonus"]
 							}
 
+
+all_features = {sign for toxidrome in toxidromes.values() for sign in toxidrome}
+
 def make_presentation(intended_toxidrome,db):
 	#Assume that all presentations have five variables
 	#Between 1 and 4 of of the five variables are pulled from the intended toxidrome
@@ -78,7 +81,11 @@ def make_presentation(intended_toxidrome,db):
 		distractor_features += [feature]
 		#Features in distractors carry one-quarter as much weight
 
-	return (difficulty, list(set(intended_features + distractor_features)))
+	positive_features = set(intended_features+distractor_features)
+	negative_features = all_features - positive_features
+
+	return (difficulty, list(positive_features) + ['!'+item if '!' not in item else item.replace('!','')
+													for item in negative_features])
 
 db = {n:person.copy() for n in xrange(2*nPatients)}
 

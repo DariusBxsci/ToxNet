@@ -66,7 +66,7 @@ log(0.8) sympathomimetic(x) => decreased_bowel_sounds(x)
 
 //sympathomimetic closures 
 //pertinent positives
-log(0.8) tachycardix(x) => sympathomimetic(x)
+log(0.8) tachycardic(x) => sympathomimetic(x)
 log(0.8) hypertensive(x) => sympathomimetic(x)
 log(0.6) mydriatic(x) => sympathomimetic(x)
 log(0.6) diaphoretic(x) => sympathomimetic(x)
@@ -99,7 +99,7 @@ log(0.8) !urinary_retention(x) => !anticholinergic(x)
 
 //anticholinergic closures
 //pertinent positives
-log(0.8) deilrious(x) => anticholinergic(x)  
+log(0.8) delirious(x) => anticholinergic(x)  
 log(0.8) hyperthermic(x) => anticholinergic(x) 
 log(0.8) dry_skin(x) => anticholinergic(x)  
 log(0.8) urinary_retention(x) => anticholinergic(x)  
