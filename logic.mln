@@ -83,7 +83,7 @@ log(0.8) bradypneic(x) => !sympathomimetic(x)
 //if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive 
 0 anticholinergic(x) => tachycardic(x) 
 log(0.8) anticholinergic(x) => delirious(x) 
-log(0.8) anticholinergic(x) => mydriasis(x)
+log(0.8) anticholinergic(x) => mydriatic(x)
 log(0.8) anticholinergic(x) => hyperthermic(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
 log(0.8) anticholinergic(x) => urinary_retention(x) 
@@ -104,7 +104,7 @@ log(0.8) hyperthermic(x) => anticholinergic(x)
 log(0.8) dry_skin(x) => anticholinergic(x)  
 log(0.8) urinary_retention(x) => anticholinergic(x)  
 log(0.8) decreased_bowel_sounds(x) => anticholinergic(x)
-log(0.8) mydriasis => anticholinergic(x)  
+log(0.8) mydriatic(x) => anticholinergic(x)  
 
  //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) cholinergic(x) => bradycardic(x) 
