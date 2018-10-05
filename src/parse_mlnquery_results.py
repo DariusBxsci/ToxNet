@@ -50,7 +50,7 @@ for result in results:
 json.dump(parsed_results,open(os.path.join(DIR_PATH,'parsed-mlnquery-results.json'),'w'))
 
 with open(os.path.join(DIR_PATH,'mlnquery-results.csv'),'w') as fout:
-	print>>fout,"id,toxidrome"
+	print>>fout,"id,predicted_toxidrome"
 	for patient, toxidromes in parsed_results.iteritems():
 		_,id = patient.split('_')
 		predicted_toxidrome = most_likely_toxidrome(toxidromes)

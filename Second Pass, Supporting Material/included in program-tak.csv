@@ -1,0 +1,404 @@
+id,tak_toxidrome,censored
+344,cholinergic,no
+819,serotonin syndrome,no
+340,anticholinergic,no
+314,n/a,yes
+342,cholinergic,no
+343,sympathomimetic,no
+811,cholinergic,no
+814,sympathomimetic,no
+349,sympathomimetic,no
+595,sympathomimetic,no
+716,sympathomimetic,no
+713,serotonin syndrome,no
+712,opioid,no
+711,serotonin syndrome,no
+911,n/a,yes
+298,anticholinergic,no
+299,anticholinergic,no
+296,anticholinergic,no
+294,serotonin syndrome,no
+292,opioid,no
+293,n/a,yes
+291,anticholinergic,no
+591,cholinergic,no
+592,opioid,no
+199,anticholinergic,no
+597,serotonin syndrome,no
+596,opioid,no
+197,cholinergic,no
+190,anticholinergic,no
+192,anticholinergic,no
+270,serotonin syndrome,no
+274,sedative-hypnotic,no
+275,cholinergic,no
+277,cholinergic,no
+279,opioid,no
+738,? anticholinergic,no
+526,serotonin syndrome,no
+520,anticholinergic,no
+522,anticholinergic,no
+523,sympathomimetic,no
+529,? cholinergic,no
+442,serotonin syndrome,no
+440,serotonin syndrome,no
+447,sympathomimetic,no
+446,? Sympathomimetic,no
+444,cholinergic,no
+109,anticholinergic,no
+101,sedative-hypnotic,no
+107,opioid,no
+104,opioid,no
+902,sympathomimetic,no
+900,anticholinergic,no
+38,opioid,no
+905,? opioid,no
+33,opioid,no
+32,sedative-hypnotic,no
+31,opioid,no
+30,anticholinergic,no
+35,serotonin syndrome,no
+34,sympathomimetic,no
+645,n/a,yes
+438,n/a,yes
+439,opioid,no
+437,? sympathomimetic,no
+434,sympathomimetic,no
+334,anticholinergic,no
+337,sympathomimetic,no
+336,opioid,no
+333,cholinergic,no
+332,serotonin syndrome,no
+818,cholinergic,no
+856,serotonin syndrome,no
+850,? anticholinergic,no
+851,opioid,no
+858,sympathomimetic,no
+859,anticholinergic,no
+6,serotonin syndrome,no
+99,n/a,yes
+98,cholinergic,no
+91,n/a,yes
+90,n/a,yes
+815,n/a,yes
+740,serotonin syndrome,no
+741,anticholinergic,no
+742,serotonin syndrome,no
+743,sympathomimetic,no
+744,serotonin syndrome,no
+746,sympathomimetic,no
+554,opioid,no
+557,sympathomimetic,no
+551,n/a,yes
+550,sympathomimetic,no
+238,anticholinergic,no
+239,opioid,no
+234,? Cholinergic,no
+233,opioid,no
+1,cholinergic,no
+146,sympathomimetic,no
+147,opioid,no
+618,anticholinergic,no
+619,opioid,no
+142,anticholinergic,no
+143,serotonin syndrome,no
+141,sympathomimetic,no
+611,cholinergic,no
+616,n/a,yes
+617,cholinergic,no
+615,opioid,no
+946,serotonin syndrome,no
+942,opioid,no
+940,anticholinergic,no
+941,n/a,yes
+685,anticholinergic,no
+682,n/a,yes
+133,n/a,yes
+132,sympathomimetic,no
+131,opioid,no
+130,anticholinergic,no
+137,sedative-hypnotic,no
+499,n/a,yes
+134,sympathomimetic,no
+495,serotonin syndrome,no
+496,cholinergic,no
+490,sympathomimetic,no
+491,cholinergic,no
+492,sympathomimetic,no
+493,opioid,no
+20,opioid,no
+22,n/a,yes
+23,cholinergic,no
+29,cholinergic,no
+407,sympathomimetic,no
+406,? sympathomimetic,no
+939,n/a,yes
+404,opioid,no
+403,anticholinergic,no
+402,? Sedative-hypnotics,no
+400,opioid,no
+932,anticholinergic,no
+931,n/a,yes
+937,serotonin syndrome,no
+409,anticholinergic,no
+408,sympathomimetic,no
+379,anticholinergic,no
+828,cholinergic,no
+371,sympathomimetic,no
+370,sympathomimetic,no
+372,serotonin syndrome,no
+375,sympathomimetic,no
+820,opioid,no
+377,n/a,yes
+822,opioid,no
+708,cholinergic,no
+700,cholinergic,no
+703,anticholinergic,no
+392,opioid,no
+391,sedative-hypnotic,no
+89,serotonin syndrome,no
+394,opioid,no
+82,n/a,yes
+83,sympathomimetic,no
+81,? sympathomimetic,no
+86,n/a,yes
+87,anticholinergic,no
+84,sympathomimetic,no
+85,n/a,yes
+797,sympathomimetic,no
+796,serotonin syndrome,no
+799,anticholinergic,no
+798,sympathomimetic,no
+7,serotonin syndrome,no
+586,sedative-hypnotic,no
+584,serotonin syndrome,no
+580,n/a,yes
+588,sympathomimetic,no
+589,anticholinergic,no
+247,sympathomimetic,no
+243,opioid,no
+242,cholinergic,no
+149,cholinergic,no
+249,opioid,no
+519,anticholinergic,no
+518,anticholinergic,no
+513,anticholinergic,no
+515,cholinergic,no
+514,opioid,no
+516,serotonin syndrome,no
+621,serotonin syndrome,no
+620,sedative-hypnotic,no
+625,serotonin syndrome,no
+624,serotonin syndrome,no
+450,sedative-hypnotic,no
+629,n/a,yes
+453,anticholinergic,no
+455,sedative-hypnotic,no
+456,sympathomimetic,no
+457,serotonin syndrome,no
+176,n/a,yes
+175,cholinergic,no
+171,? anticholinergic,no
+977,sympathomimetic,no
+975,serotonin syndrome,no
+657,opioid,no
+978,cholinergic,no
+656,cholinergic,no
+183,sympathomimetic,no
+180,opioid,no
+655,opioid,no
+653,serotonin syndrome,no
+650,cholinergic,no
+185,n/a,yes
+658,n/a,yes
+659,sympathomimetic,no
+868,sympathomimetic,no
+12,serotonin syndrome,no
+17,opioid,no
+16,sedative-hypnotic,no
+861,n/a,yes
+18,cholinergic,no
+865,n/a,yes
+866,cholinergic,no
+883,sympathomimetic,no
+753,n/a,yes
+881,sedative-hypnotic,no
+880,anticholinergic,no
+887,sedative-hypnotic,no
+885,sympathomimetic,no
+752,opioid,no
+889,opioid,no
+63,sympathomimetic,no
+320,serotonin syndrome,no
+326,cholinergic,no
+327,serotonin syndrome,no
+324,opioid,no
+329,n/a,yes
+775,n/a,yes
+200,sympathomimetic,no
+203,sympathomimetic,no
+776,opioid,no
+771,cholinergic,no
+207,sympathomimetic,no
+206,sedative-hypnotic,no
+209,sympathomimetic,no
+208,serotonin syndrome,no
+76,n/a,yes
+75,anticholinergic,no
+74,cholinergic,no
+73,n/a,yes
+70,? Serotonin syndrome,no
+78,n/a,yes
+805,cholinergic,no
+669,opioid,no
+668,opioid,no
+666,serotonin syndrome,no
+665,sympathomimetic,no
+664,cholinergic,no
+660,sedative-hypnotic,no
+692,sympathomimetic,no
+690,anticholinergic,no
+542,opioid,no
+543,sympathomimetic,no
+540,? sympathomimetic,no
+546,serotonin syndrome,no
+547,n/a,yes
+544,anticholinergic,no
+545,serotonin syndrome,no
+8,cholinergic,no
+549,serotonin syndrome,no
+995,anticholinergic,no
+997,anticholinergic,no
+996,opioid,no
+990,anticholinergic,no
+993,n/a,yes
+999,? anticholinergic,no
+998,sympathomimetic,no
+121,anticholinergic,no
+126,anticholinergic,no
+127,anticholinergic,no
+2,opioid,no
+414,sympathomimetic,no
+410,anticholinergic,no
+412,n/a,yes
+860,n/a,yes
+920,cholinergic,no
+498,anticholinergic,no
+922,n/a,yes
+419,anticholinergic,no
+313,n/a,yes
+331,opioid,no
+310,anticholinergic,no
+317,cholinergic,no
+316,? anticholinergic,no
+921,sedative-hypnotic,no
+832,sympathomimetic,no
+830,serotonin syndrome,no
+836,sedative-hypnotic,no
+838,cholinergic,no
+380,sympathomimetic,no
+382,sympathomimetic,no
+383,sympathomimetic,no
+384,n/a,yes
+387,anticholinergic,no
+388,sympathomimetic,no
+785,serotonin syndrome,no
+780,cholinergic,no
+781,cholinergic,no
+788,sympathomimetic,no
+578,cholinergic,no
+882,sedative-hypnotic,no
+573,? opioid,no
+572,sympathomimetic,no
+571,opioid,no
+577,anticholinergic,no
+153,sympathomimetic,no
+575,n/a,yes
+574,anticholinergic,no
+62,anticholinergic,no
+259,anticholinergic,no
+64,serotonin syndrome,no
+67,sedative-hypnotic,no
+68,serotonin syndrome,no
+69,opioid,no
+250,cholinergic,no
+256,serotonin syndrome,no
+257,sympathomimetic,no
+735,sympathomimetic,no
+734,serotonin syndrome,no
+736,serotonin syndrome,no
+507,cholinergic,no
+504,serotonin syndrome,no
+505,n/a,yes
+503,cholinergic,no
+630,sympathomimetic,no
+631,anticholinergic,no
+633,sympathomimetic,no
+469,sympathomimetic,no
+468,anticholinergic,no
+637,cholinergic,no
+638,serotonin syndrome,no
+639,cholinergic,no
+466,serotonin syndrome,no
+461,sympathomimetic,no
+460,sympathomimetic,no
+901,serotonin syndrome,no
+168,serotonin syndrome,no
+165,opioid,no
+166,serotonin syndrome,no
+167,cholinergic,no
+160,serotonin syndrome,no
+162,cholinergic,no
+967,sympathomimetic,no
+962,anticholinergic,no
+969,cholinergic,no
+909,anticholinergic,no
+876,serotonin syndrome,no
+874,opioid,no
+873,cholinergic,no
+959,sedative-hypnotic,no
+892,? anticholinergic,no
+895,n/a,yes
+896,serotonin syndrome,no
+897,serotonin syndrome,no
+899,cholinergic,no
+649,cholinergic,no
+356,anticholinergic,no
+809,anticholinergic,no
+808,serotonin syndrome,no
+353,cholinergic,no
+352,cholinergic,no
+351,n/a,yes
+950,cholinergic,no
+803,n/a,yes
+801,sedative-hypnotic,no
+800,sedative-hypnotic,no
+359,serotonin syndrome,no
+804,anticholinergic,no
+762,cholinergic,no
+763,opioid,no
+760,cholinergic,no
+766,sympathomimetic,no
+767,n/a,yes
+764,n/a,yes
+219,sedative-hypnotic,no
+957,sedative-hypnotic,no
+289,opioid,no
+4,serotonin syndrome,no
+282,cholinergic,no
+285,? sympathomimetic,no
+286,sympathomimetic,no
+678,serotonin syndrome,no
+679,anticholinergic,no
+677,opioid,no
+671,cholinergic,no
+673,serotonin syndrome,no
+262,sedative-hypnotic,no
+261,sympathomimetic,no
+267,? sympathomimetic,no
+264,opioid,no
+59,sympathomimetic,no
+58,cholinergic,no
+55,serotonin syndrome,no
+54,n/a,yes
+57,n/a,yes
