@@ -84,7 +84,7 @@ def make_presentation(intended_toxidrome,db):
 	positive_features = set(intended_features+distractor_features)
 	negative_features = all_features - positive_features
 
-	return (difficulty, list(positive_features))# + ['!'+item if '!' not in item else item.replace('!','')
+	return list(positive_features)# + ['!'+item if '!' not in item else item.replace('!','')
 												#a	for item in negative_features])
 
 db = {n:person.copy() for n in xrange(2*nPatients)}
@@ -94,13 +94,15 @@ for n in xrange(2*nPatients):
 
 	db[n]["name"] = "patient_%d"%n
 	db[n]["intended_toxidrome"] = intended_toxidrome
-	db[n]["difficulty"], db[n]["presentation"] = make_presentation(intended_toxidrome,db)
+	db[n]["difficulty"] = 0
+	db[n]["presentation"] = make_presentation(intended_toxidrome,db)
 	db[n]["random_number"] = random.random() #Can vectorize this if needed	
 
-json.dump(db,open(os.path.join(DATA_PATH,"world.json"),"wb"))
+#json.dump(db,open(os.path.join(DATA_PATH,"world.json"),"wb"))
 
 json.dump({key:value for key,value in db.iteritems() if value["random_number"] > 0.5},
-	  open(os.path.join(DATA_PATH,"world-train.json"),"wb"))
-
+	  open(os.path.join(DATA_PATH,"world-train-pure.json"),"wb"))
+'''
 json.dump({key:value for key,value in db.iteritems() if value["random_number"] < 0.5},
 	  open(os.path.join(DATA_PATH,"world-test.json"),"wb"))
+'''

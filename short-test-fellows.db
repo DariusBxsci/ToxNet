@@ -1,0 +1,13 @@
+//patient_344
+hypertensive(patient_344)
+increased_bowel_sounds(patient_344)
+!clonus(patient_344)
+miotic(patient_344)
+bradycardic(patient_344)
+
+//patient_819
+clonus(patient_819)
+hyperthermic(patient_819)
+mydriatic(patient_819)
+urinary_retention(patient_819)
+hyperreflexia(patient_819)

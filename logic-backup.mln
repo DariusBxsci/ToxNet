@@ -43,7 +43,7 @@ clonus(person)
 hyperreflexia(person)
 rigid(person)
 
-//This version omits febrile. TODO: Distinguish between hyperthermic and febrile.
+//This version omits febrile. TODO: Introduce and distinguish between hyperthermic and febrile.
 hyperthermic(person)
 hypothermic(person)
 
@@ -54,14 +54,13 @@ log(0.8) hyperthermic(x) => serotonin_syndrome(x)
 log(0.8) hyperthermic(x) => anticholinergic(x) 
 log(0.8) hyperthermic(x) => sympathomimetic(x)
 
-
 // rules
 //if you have a sympathomimetic toxidrome then you are tachycardic, diaphoretic, mydriatic, agitated, hypertensive, tachypneic 
-0 sympathomimetic(x) => tachycardic(x) 
+log(0.8) sympathomimetic(x) => tachycardic(x) 
 log(0.8) sympathomimetic(x) => hypertensive(x)
 log(0.8) sympathomimetic(x) => agitated(x)
 log(0.8) sympathomimetic(x) => diaphoretic(x)
-log(0.6) sympathomimetic(x) => mydriatic(x)
+log(0.4) sympathomimetic(x) => mydriatic(x)
 log(0.8) sympathomimetic(x) => tachypneic(x)
 log(0.8) sympathomimetic(x) => decreased_bowel_sounds(x)
 
@@ -73,11 +72,12 @@ log(0.6) mydriatic(x) => sympathomimetic(x)
 log(0.6) diaphoretic(x) => sympathomimetic(x)
 log(0.6) tachypneic(x) => sympathomimetic(x)
 log(0.6) increased_bowel_sounds(x) => sympathomimetic(x)
+log(0.8) mydriatic(x) => sympathomimetic(x)
 
 //pertinent negatives
 log(0.8) bradycardic(x) => !sympathomimetic(x)
 log(0.8) hypotensive(x) => !sympathomimetic(x)
-//log(0.8) miotic(x) => !sympathomimetic(x)
+log(0.8) miotic(x) => !sympathomimetic(x)
 log(0.8) bradypneic(x) => !sympathomimetic(x)
 
 //if you have an anticholinergic toxidrome, then you are tachycardic, hypertensive 
@@ -86,7 +86,7 @@ log(0.8) anticholinergic(x) => delirious(x)
 log(0.8) anticholinergic(x) => mydriatic(x)
 log(0.8) anticholinergic(x) => hyperthermic(x) 
 log(0.8) anticholinergic(x) => dry_skin(x) 
-0 anticholinergic(x) => urinary_retention(x) 
+log(0.8) anticholinergic(x) => urinary_retention(x) 
 log(0.8) anticholinergic(x) => decreased_bowel_sounds(x)
 
 //anticholinergic closures
@@ -106,7 +106,6 @@ log(0.8) urinary_retention(x) => anticholinergic(x)
 log(0.8) decreased_bowel_sounds(x) => anticholinergic(x)
 log(0.8) mydriatic(x) => anticholinergic(x)  
 
-
  //if you have an cholinergic toxidrome, then you are tachycardic, hypertensive 
 log(0.8) cholinergic(x) => bradycardic(x) 
 //log(0.8) cholinergic(x) => hypotensive(x)
@@ -124,15 +123,14 @@ log(0.8) dry_skin(x) => !cholinergic(x)
 //cholinergic closures
 //pertinent positives
 log(0.8) bradycardic(x) => cholinergic(x)
-log(0.8) diaphoretic(x) => cholinergic(x)
+log(0.8) diaphoretic(x) => cholinergic(X)
 log(0.8) increased_bowel_sounds(x) => cholinergic(x)
 log(0.2) hyperthermic(x) => cholinergic(x)
 
-
  //if you have a sedative-hypnotic toxidrome, then you are tachycardic, hypertensive 
-//log(0.8) hypertensive(x) => !sedative_hypnotic(x) 
+log(0.8) hypertensive(x) => !sedative_hypnotic(x) 
 log(0.8) sedative_hypnotic(x) => somnolent(x) 
-//log(0.8) sedative_hypnotic(x) => !hyperthermic(x) 
+log(0.8) sedative_hypnotic(x) => !hyperthermic(x) 
 //log(0.8) sedative_hypnotic(x) => !diaphoretic(x) 
 log(0.8) sedative_hypnotic(x) => !increased_bowel_sounds(x)
 
@@ -153,8 +151,7 @@ log(0.8) !miotic(x) => !opioid(x)
 log(0.8) tachycardic(x) => !opioid(x)
 
 //if you have serotonin syndrome, then you are hyperthermic, hypertensive, and have clonus
-0 clonus(x) => serotonin_syndrome(x)
-0 serotonin_syndrome(x) => clonus(x)
+log(0.8) clonus(x) <=> serotonin_syndrome(x)
 log(0.8) hyperthermic(x) => serotonin_syndrome(x)
 log(0.8) hyperreflexia(x) => serotonin_syndrome(x)
 log(0.8) serotonin_syndrome(x) => rigid(x)
@@ -164,7 +161,3 @@ log(0.8) !clonus(x) => !serotonin_syndrome(x)
 0 bradycardic(x) => !tachycardic(x)
 0 tachypneic(x) => !bradypneic(x)
 0 hyperthermic(x) => !hypothermic(x)
-
-
-
-

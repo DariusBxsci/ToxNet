@@ -28,11 +28,11 @@ S'100'
 p13
 sS'db'
 p14
-S'world-train.db'
+S'world-train-pure.db'
 p15
 sS'output_filename'
 p16
-S'wts.pypll.world-train-logic.mln'
+S'wts.pypll.world-train-pure-logic.mln'
 p17
 sS'pattern'
 p18
