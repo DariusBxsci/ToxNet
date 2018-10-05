@@ -18,9 +18,11 @@ parser.add_argument("-i","--input", help="input path (file or directory)")
 args = parser.parse_args()
 
 if os.path.isdir(args.input):
+	DIR_PATH = args.input
 	results_filenames = [os.path.join(args.input,filename) for filename in os.listdir(args.input)
 							if filename.endswith('.results')]
 elif os.path.isfile(args.input):
+	DIR_PATH = os.path.dirname(os.path.realpath(args.input))
 	#Hole here. Not checking whether this file actually contains results
 	results_filenames = [args.input]
 
@@ -45,21 +47,11 @@ for result in results:
  	else:
  		parsed_results[patient] = [{"toxidrome":toxidrome, "probability":float(probability)}]
 
-if os.path.isdir(args.input):
-	json.dump(parsed_results,open(os.path.join(args.input,'parsed-mlnquery-results.json'),'w'))
-elif os.path.isfile(args.input):
+json.dump(parsed_results,open(os.path.join(DIR_PATH,'parsed-mlnquery-results.json'),'w'))
 
-
-#Chance of silent fail here. There is no catching "else" statement
-
-'''
-with open('./data/analysis.csv','w') as fout:
-	print>>fout,"id,predicted,actual,difficulty"
-	for name in parsed_results:
-		predicted_toxidrome = most_likely_toxidrome(parsed_results[name])
-
-		_,id = name.split("_")
-		actual_toxidrome = world[id]["intended_toxidrome"]
-		print>>fout,','.join([id,predicted_toxidrome,actual_toxidrome,str(world[id]["difficulty"])])
-
-'''
+with open(os.path.join(DIR_PATH,'mlnquery-results.csv'),'w') as fout:
+	print>>fout,"id,toxidrome"
+	for patient, toxidromes in parsed_results.iteritems():
+		_,id = patient.split('_')
+		predicted_toxidrome = most_likely_toxidrome(toxidromes)
+		print>>fout,'%s,%s'%(id,predicted_toxidrome)
