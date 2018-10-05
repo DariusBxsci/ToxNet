@@ -1,0 +1,70 @@
+id,human_toxidrome,actual_toxidrome,difficulty,predicted_toxidrome
+340,anticholinergic,serotonin_syndrome,0,anticholinergic
+349,sympathomimetic,serotonin_syndrome,0,sympathomimetic
+595,sympathomimetic,sympathomimetic,0,sympathomimetic
+716,sympathomimetic,anticholinergic,0,cholinergic
+711,serotonin syndrome,opioid,0,cholinergic
+298,anticholinergic,serotonin_syndrome,0,anticholinergic
+294,serotonin syndrome,cholinergic,0,serotonin_syndrome
+270,serotonin syndrome,serotonin_syndrome,0,cholinergic
+277,cholinergic,cholinergic,0,cholinergic
+522,anticholinergic,sympathomimetic,0,anticholinergic
+440,serotonin syndrome,cholinergic,0,serotonin_syndrome
+446,sympathomimetic,serotonin_syndrome,0,anticholinergic
+444,cholinergic,anticholinergic,0,anticholinergic
+109,anticholinergic,sedative_hypnotic,0,cholinergic
+30,anticholinergic,serotonin_syndrome,0,anticholinergic
+35,serotonin syndrome,sedative_hypnotic,0,serotonin_syndrome
+434,sympathomimetic,serotonin_syndrome,0,cholinergic
+334,anticholinergic,sedative_hypnotic,0,anticholinergic
+337,sympathomimetic,anticholinergic,0,sympathomimetic
+333,cholinergic,cholinergic,0,sympathomimetic
+332,serotonin syndrome,serotonin_syndrome,0,serotonin_syndrome
+858,sympathomimetic,anticholinergic,0,sympathomimetic
+6,serotonin syndrome,anticholinergic,0,serotonin_syndrome
+98,cholinergic,sympathomimetic,0,cholinergic
+740,serotonin syndrome,anticholinergic,0,cholinergic
+742,serotonin syndrome,sympathomimetic,0,cholinergic
+743,sympathomimetic,sympathomimetic,0,anticholinergic
+550,sympathomimetic,cholinergic,0,sympathomimetic
+238,anticholinergic,serotonin_syndrome,0,anticholinergic
+1,cholinergic,opioid,0,sedative_hypnotic
+146,sympathomimetic,sedative_hypnotic,0,serotonin_syndrome
+618,anticholinergic,sympathomimetic,0,cholinergic
+143,serotonin syndrome,opioid,0,cholinergic
+611,cholinergic,anticholinergic,0,cholinergic
+940,anticholinergic,opioid,0,anticholinergic
+685,anticholinergic,opioid,0,sympathomimetic
+132,sympathomimetic,cholinergic,0,anticholinergic
+130,anticholinergic,opioid,0,anticholinergic
+134,sympathomimetic,anticholinergic,0,serotonin_syndrome
+491,cholinergic,sedative_hypnotic,0,anticholinergic
+29,cholinergic,cholinergic,0,anticholinergic
+407,sympathomimetic,cholinergic,0,anticholinergic
+403,anticholinergic,serotonin_syndrome,0,anticholinergic
+937,serotonin syndrome,anticholinergic,0,serotonin_syndrome
+409,anticholinergic,sedative_hypnotic,0,serotonin_syndrome
+408,sympathomimetic,opioid,0,anticholinergic
+379,anticholinergic,cholinergic,0,sympathomimetic
+371,sympathomimetic,opioid,0,sympathomimetic
+370,sympathomimetic,sedative_hypnotic,0,cholinergic
+372,serotonin syndrome,sympathomimetic,0,serotonin_syndrome
+89,serotonin syndrome,sedative_hypnotic,0,serotonin_syndrome
+87,anticholinergic,sedative_hypnotic,0,anticholinergic
+84,sympathomimetic,sedative_hypnotic,0,anticholinergic
+796,serotonin syndrome,opioid,0,cholinergic
+799,anticholinergic,sedative_hypnotic,0,anticholinergic
+798,sympathomimetic,sedative_hypnotic,0,serotonin_syndrome
+7,serotonin syndrome,serotonin_syndrome,0,cholinergic
+584,serotonin syndrome,serotonin_syndrome,0,serotonin_syndrome
+589,anticholinergic,anticholinergic,0,anticholinergic
+247,sympathomimetic,sedative_hypnotic,0,sympathomimetic
+513,anticholinergic,sympathomimetic,0,cholinergic
+516,serotonin syndrome,anticholinergic,0,anticholinergic
+625,serotonin syndrome,sedative_hypnotic,0,cholinergic
+624,serotonin syndrome,opioid,0,serotonin_syndrome
+453,anticholinergic,sedative_hypnotic,0,anticholinergic
+171,anticholinergic,sedative_hypnotic,0,cholinergic
+978,cholinergic,sedative_hypnotic,0,sympathomimetic
+659,sympathomimetic,sympathomimetic,0,anticholinergic
+12,serotonin syndrome,sedative_hypnotic,0,serotonin_syndrome

@@ -1,5 +1,6 @@
 id,human_toxidrome
 344,cholinergic
+819,anticholinergic
 340,anticholinergic
 342,cholinergic
 343,sympathomimetic
@@ -9,75 +10,134 @@ id,human_toxidrome
 595,sympathomimetic
 716,sympathomimetic
 713,serotonin syndrome
+712,opiate
 711,serotonin syndrome
+911,sedative hypnotic
 298,anticholinergic
 299,anticholinergic
+296,serotonin syndrome
 294,serotonin syndrome
+292,opiate
+293,sympathomimetic
 291,anticholinergic
 591,cholinergic
+592,opiate
 199,anticholinergic
 597,serotonin syndrome
+596,sedative hypnotic
 197,cholinergic
 190,anticholinergic
+192,sedative hypnotic
 270,serotonin syndrome
+274,sedative hypnotic
 275,cholinergic
 277,cholinergic
+279,sedative hypnotic
+738,sympathomimetic
 526,serotonin syndrome
 520,anticholinergic
 522,anticholinergic
 523,sympathomimetic
+529,opiate
 442,serotonin syndrome
 440,serotonin syndrome
 447,sympathomimetic
 446,sympathomimetic
 444,cholinergic
 109,anticholinergic
+101,sedative hypnotic
+107,opiate
+104,opiate
 902,sympathomimetic
+900,sympathomimetic
+38,opiate
+905,opiate
+33,opiate
+32,anticholinergic
+31,opiate
 30,anticholinergic
 35,serotonin syndrome
 34,sympathomimetic
+645,cholinergic
+438,sedative hypnotic
+439,opiate
+437,sedative hypnotic
 434,sympathomimetic
 334,anticholinergic
 337,sympathomimetic
+336,opiate
 333,cholinergic
 332,serotonin syndrome
 818,cholinergic
 856,serotonin syndrome
+850,opiate
+851,opiate
 858,sympathomimetic
 859,anticholinergic
 6,serotonin syndrome
+99,sedative hypnotic
 98,cholinergic
+91,sedative hypnotic
+90,
+815,serotonin syndrome
 740,serotonin syndrome
 741,anticholinergic
 742,serotonin syndrome
 743,sympathomimetic
+744,anticholinergic
 746,sympathomimetic
+554,opiate
 557,sympathomimetic
+551,serotonin syndrome
 550,sympathomimetic
 238,anticholinergic
+239,opiate
+234,anticholinergic
+233,opiate
 1,cholinergic
 146,sympathomimetic
+147,sedative hypnotic
 618,anticholinergic
+619,sedative hypnotic
 142,anticholinergic
 143,serotonin syndrome
 141,sympathomimetic
 611,cholinergic
+616,
+617,sympathomimetic
+615,opiate
+946,sedative hypnotic
+942,sedative hypnotic
 940,anticholinergic
+941,cholinergic
 685,anticholinergic
+682,cholinergic
+133,opiate
 132,sympathomimetic
+131,opiate
 130,anticholinergic
+137,sedative hypnotic
+499,
 134,sympathomimetic
 495,serotonin syndrome
 496,cholinergic
 490,sympathomimetic
 491,cholinergic
 492,sympathomimetic
+493,opiate
+20,cholinergic
+22,
 23,cholinergic
 29,cholinergic
 407,sympathomimetic
 406,sympathomimetic
+939,serotonin syndrome
+404,cholinergic
 403,anticholinergic
+402,sedative hypnotic
+400,opiate
 932,anticholinergic
+931,cholinergic
 937,serotonin syndrome
 409,anticholinergic
 408,sympathomimetic
@@ -87,40 +147,72 @@ id,human_toxidrome
 370,sympathomimetic
 372,serotonin syndrome
 375,sympathomimetic
+820,sedative hypnotic
+377,
+822,cholinergic
+708,sympathomimetic
+700,sympathomimetic
 703,anticholinergic
+392,opiate
+391,sedative hypnotic
 89,serotonin syndrome
+394,opiate
+82,opiate
 83,sympathomimetic
+81,serotonin syndrome
+86,sympathomimetic
 87,anticholinergic
 84,sympathomimetic
+85,
 797,sympathomimetic
 796,serotonin syndrome
 799,anticholinergic
 798,sympathomimetic
 7,serotonin syndrome
+586,sedative hypnotic
 584,serotonin syndrome
+580,cholinergic
 588,sympathomimetic
 589,anticholinergic
 247,sympathomimetic
+243,opiate
 242,cholinergic
 149,cholinergic
+249,opiate
 519,anticholinergic
 518,anticholinergic
 513,anticholinergic
 515,cholinergic
+514,sedative hypnotic
 516,serotonin syndrome
 621,serotonin syndrome
+620,sedative hypnotic
 625,serotonin syndrome
 624,serotonin syndrome
+450,sedative hypnotic
+629,sympathomimetic
 453,anticholinergic
+455,sedative hypnotic
 456,sympathomimetic
 457,serotonin syndrome
+176,sympathomimetic
+175,opiate
 171,anticholinergic
 977,sympathomimetic
+975,anticholinergic
+657,sedative hypnotic
 978,cholinergic
 656,cholinergic
 183,sympathomimetic
+180,opiate
+655,opiate
 653,serotonin syndrome
 650,cholinergic
+185,sympathomimetic
+658,anticholinergic
 659,sympathomimetic
 868,sympathomimetic
 12,serotonin syndrome
+17,opiate
+16,sedative hypnotic
+861,cholinergic

@@ -1,0 +1,7 @@
+human_toxidrome,anticholinergic,cholinergic,opioid,sedative_hypnotic,serotonin_syndrome,sympathomimetic
+anticholinergic,14,4,0,0,3,2
+cholinergic,3,6,0,1,1,3
+opiate,4,5,2,2,6,0
+sedative hypnotic,2,1,1,4,7,0
+serotonin syndrome,2,10,0,0,11,0
+sympathomimetic,8,4,0,0,4,8
