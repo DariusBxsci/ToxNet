@@ -20,15 +20,16 @@ dfs = {'human':human_ratings,'synthetic':ground_truth, 'model':mln_guesses}
 df = reduce(lambda left,right: pd.merge(left,right,on='id'), dfs.values())
 df.to_csv(os.path.join(args.input,'amalgamated.csv'),index=False)
 
-#only 69 fully vetted, and present in all three categories; here's hoping
-#all easiest level
+
+print df['difficulty'].value_counts()
+
 
 #Human Model
 cross_tab = pd.crosstab(df['human_toxidrome'],df['predicted_toxidrome'])
 cross_tab.to_csv(os.path.join(args.input,'contingency_table_human_predicted.csv'))
-
+#print cross_tab
 as_array = cross_tab.values
-print np.diag(as_array).sum()/float(as_array.sum()) #0.381355932203
+#print np.diag(as_array).sum(), float(as_array.sum()) #0.381355932203
 #print cohens_kappa(cross_tab)
 '''
                   Simple Kappa Coefficient
@@ -51,7 +52,7 @@ print np.diag(as_array).sum()/float(as_array.sum()) #0.381355932203
 cross_tab = pd.crosstab(df['human_toxidrome'],df['actual_toxidrome'])
 cross_tab.to_csv(os.path.join(args.input,'contingency_table_human_synthetic.csv'))
 as_array = cross_tab.values
-print np.diag(as_array).sum()/float(as_array.sum())
+#print np.diag(as_array).sum(), float(as_array.sum())
 #0.161016949153
 #print cohens_kappa(cross_tab)
 '''
@@ -75,7 +76,7 @@ print np.diag(as_array).sum()/float(as_array.sum())
 cross_tab = pd.crosstab(df['actual_toxidrome'],df['predicted_toxidrome'])
 cross_tab.to_csv(os.path.join(args.input,'contingency_table_synthetic_predicted.csv'))
 as_array = cross_tab.values
-print np.diag(as_array).sum()/float(as_array.sum())
+#print np.diag(as_array).sum(),float(as_array.sum())
 #0.134453781513
 #print cohens_kappa(cross_tab)
 '''
