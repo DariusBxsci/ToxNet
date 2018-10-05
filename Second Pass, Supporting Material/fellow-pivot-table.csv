@@ -1,0 +1,8 @@
+tak_toxidrome,anticholinergic,cholinergic,opiate,sedative hypnotic,serotonin syndrome,sympathomimetic
+anticholinergic,32,0,1,1,1,2
+cholinergic,1,24,2,0,0,3
+n/a,0,0,0,0,0,0
+opioid,0,3,26,8,0,0
+sedative-hypnotic,1,0,0,10,0,0
+serotonin syndrome,3,0,0,1,29,0
+sympathomimetic,0,0,0,1,1,40

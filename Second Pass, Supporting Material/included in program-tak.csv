@@ -34,16 +34,16 @@ id,tak_toxidrome,censored
 275,cholinergic,no
 277,cholinergic,no
 279,opioid,no
-738,? anticholinergic,no
+738,anticholinergic,no
 526,serotonin syndrome,no
 520,anticholinergic,no
 522,anticholinergic,no
 523,sympathomimetic,no
-529,? cholinergic,no
+529,cholinergic,no
 442,serotonin syndrome,no
 440,serotonin syndrome,no
 447,sympathomimetic,no
-446,? Sympathomimetic,no
+446,sympathomimetic,yes
 444,cholinergic,no
 109,anticholinergic,no
 101,sedative-hypnotic,no
@@ -52,7 +52,7 @@ id,tak_toxidrome,censored
 902,sympathomimetic,no
 900,anticholinergic,no
 38,opioid,no
-905,? opioid,no
+905,opioid,no
 33,opioid,no
 32,sedative-hypnotic,no
 31,opioid,no
@@ -62,7 +62,7 @@ id,tak_toxidrome,censored
 645,n/a,yes
 438,n/a,yes
 439,opioid,no
-437,? sympathomimetic,no
+437,sympathomimetic,no
 434,sympathomimetic,no
 334,anticholinergic,no
 337,sympathomimetic,no
@@ -71,7 +71,7 @@ id,tak_toxidrome,censored
 332,serotonin syndrome,no
 818,cholinergic,no
 856,serotonin syndrome,no
-850,? anticholinergic,no
+850,anticholinergic,no
 851,opioid,no
 858,sympathomimetic,no
 859,anticholinergic,no
@@ -93,7 +93,7 @@ id,tak_toxidrome,censored
 550,sympathomimetic,no
 238,anticholinergic,no
 239,opioid,no
-234,? Cholinergic,no
+234,cholinergic,no
 233,opioid,no
 1,cholinergic,no
 146,sympathomimetic,no
@@ -131,11 +131,11 @@ id,tak_toxidrome,censored
 23,cholinergic,no
 29,cholinergic,no
 407,sympathomimetic,no
-406,? sympathomimetic,no
+406,sympathomimetic,no
 939,n/a,yes
 404,opioid,no
 403,anticholinergic,no
-402,? Sedative-hypnotics,no
+402,sedative-hypnotic,no
 400,opioid,no
 932,anticholinergic,no
 931,n/a,yes
@@ -160,7 +160,7 @@ id,tak_toxidrome,censored
 394,opioid,no
 82,n/a,yes
 83,sympathomimetic,no
-81,? sympathomimetic,no
+81,sympathomimetic,no
 86,n/a,yes
 87,anticholinergic,no
 84,sympathomimetic,no
@@ -198,7 +198,7 @@ id,tak_toxidrome,censored
 457,serotonin syndrome,no
 176,n/a,yes
 175,cholinergic,no
-171,? anticholinergic,no
+171,anticholinergic,no
 977,sympathomimetic,no
 975,serotonin syndrome,no
 657,opioid,no
@@ -247,7 +247,7 @@ id,tak_toxidrome,censored
 75,anticholinergic,no
 74,cholinergic,no
 73,n/a,yes
-70,? Serotonin syndrome,no
+70,serotonin syndrome,no
 78,n/a,yes
 805,cholinergic,no
 669,opioid,no
@@ -260,7 +260,7 @@ id,tak_toxidrome,censored
 690,anticholinergic,no
 542,opioid,no
 543,sympathomimetic,no
-540,? sympathomimetic,no
+540,sympathomimetic,no
 546,serotonin syndrome,no
 547,n/a,yes
 544,anticholinergic,no
@@ -272,7 +272,7 @@ id,tak_toxidrome,censored
 996,opioid,no
 990,anticholinergic,no
 993,n/a,yes
-999,? anticholinergic,no
+999,anticholinergic,no
 998,sympathomimetic,no
 121,anticholinergic,no
 126,anticholinergic,no
@@ -290,7 +290,7 @@ id,tak_toxidrome,censored
 331,opioid,no
 310,anticholinergic,no
 317,cholinergic,no
-316,? anticholinergic,no
+316,anticholinergic,no
 921,sedative-hypnotic,no
 832,sympathomimetic,no
 830,serotonin syndrome,no
@@ -308,7 +308,7 @@ id,tak_toxidrome,censored
 788,sympathomimetic,no
 578,cholinergic,no
 882,sedative-hypnotic,no
-573,? opioid,no
+573,opioid,no
 572,sympathomimetic,no
 571,opioid,no
 577,anticholinergic,no
@@ -357,7 +357,7 @@ id,tak_toxidrome,censored
 874,opioid,no
 873,cholinergic,no
 959,sedative-hypnotic,no
-892,? anticholinergic,no
+892,anticholinergic,no
 895,n/a,yes
 896,serotonin syndrome,no
 897,serotonin syndrome,no
@@ -386,7 +386,7 @@ id,tak_toxidrome,censored
 289,opioid,no
 4,serotonin syndrome,no
 282,cholinergic,no
-285,? sympathomimetic,no
+285,sympathomimetic,no
 286,sympathomimetic,no
 678,serotonin syndrome,no
 679,anticholinergic,no
@@ -395,7 +395,7 @@ id,tak_toxidrome,censored
 673,serotonin syndrome,no
 262,sedative-hypnotic,no
 261,sympathomimetic,no
-267,? sympathomimetic,no
+267,sympathomimetic,no
 264,opioid,no
 59,sympathomimetic,no
 58,cholinergic,no
