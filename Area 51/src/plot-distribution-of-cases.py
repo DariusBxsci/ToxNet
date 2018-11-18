@@ -28,4 +28,4 @@ new_ticklabels = [conversion[label] for label in a]
 ax.set_yticklabels(new_ticklabels)
 
 plt.tight_layout()
-plt.savefig("./imgs/intended-toxidrome-distribution.png",dpi=400)
+plt.savefig("./imgs/intended-toxidrome-distribution//CTN-0006.png",dpi=400)

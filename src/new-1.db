@@ -1,0 +1,9 @@
+has_symptom(Bob, tachycardia)
+
+has_symptom(tachycardia,Bob)
+has_symptom(hypertension,Bob)
+has_symptom(mydraisis,Bob)
+has_symptom(decreased_bowel_sounds,Bob)
+has_symptom(hyperthemia,Bob)
+has_symptom(dry_skin,Bob)
+
