@@ -1,0 +1,47 @@
+// domain declarations
+toxidrome = {Sympathomimetic, Anticholinergic, Cholinergic, Opioid, Sedative_hypnotic, Serotonin_syndrome}
+symptom = {tachycardia, hypertension, bradycardia, mydriasis, tachypnea, increased_bowel_sounds, tachypnea, bradypnea, hyperthermia, diaphoresis, dry_skin, miosis, decreased_bowel_sounds, hypotension, bradycardia, hypothermia, clonus, hyperreflexia}
+
+// predicate declarations
+has_symptom(symptom, p)
+has_toxidrome(p, toxidrome)
+
+// formulas
+has_toxidrome(p, Sympathomimetic) => has_symptom(tachycardia, p).
+0.177800    has_toxidrome(p, Sympathomimetic) => has_symptom(tachypnea, p)
+0.177800    has_toxidrome(p, Sympathomimetic) => has_symptom(hypertension, p)
+0.177800    has_toxidrome(p, Sympathomimetic) => has_symptom(mydriasis, p)
+0.177800    has_toxidrome(p, Sympathomimetic) => has_symptom(increased_bowel_sounds, p)
+0.177800    has_toxidrome(p, Sympathomimetic) => has_symptom(hyperthermia, p)
+0.177800    has_toxidrome(p, Sympathomimetic) => has_symptom(diaphoresis, p)
+has_toxidrome(p, Anticholinergic) => has_symptom(tachycardia, p).
+has_toxidrome(p, Anticholinergic) => has_symptom(mydriasis, p).
+0.254021    has_toxidrome(p, Anticholinergic) => has_symptom(decreased_bowel_sounds, p)
+has_toxidrome(p, Anticholinergic) => has_symptom(hyperthemia, p).
+0.254021    has_toxidrome(p, Anticholinergic) => has_symptom(dry_skin, p)
+has_toxidrome(p, Cholinergic) => has_symptom(bradycardia, p).
+0.317567    has_toxidrome(p, Cholinergic) => has_symptom(miosis, p)
+has_toxidrome(p, Cholinergic) => has_symptom(increased_bowel_sounds, p).
+has_toxidrome(p, Cholinergic) => has_symptom(diaphoresis, p).
+has_toxidrome(p, Opioid) => has_symptom(bradypnea, p).
+has_toxidrome(p, Opioid) => has_symptom(miosis, p).
+0.309370    has_toxidrome(p, Opioid) => has_symptom(decreased_bowel_sounds, p)
+0.309370    has_toxidrome(p, Opioid) => has_symptom(dry_skin, p)
+has_toxidrome(p, Sedative_hypnotic) => has_symptom(bradypnea, p).
+0.634436    has_toxidrome(p, Sedative_hypnotic) => has_symptom(decreased_bowel_sounds, p)
+0.184878    has_toxidrome(p, Serotonin_syndrome) => has_symptom(tachycardia, p)
+has_toxidrome(p, Serotonin_syndrome) => has_symptom(hyperreflexia, p).
+has_toxidrome(p, Serotonin_syndrome) => has_symptom(clonus, p).
+0.184878    has_toxidrome(p, Serotonin_syndrome) => has_symptom(hypertension, p)
+0.184878    has_toxidrome(p, Serotonin_syndrome) => has_symptom(increased_bowel_sounds, p)
+0.184878    has_toxidrome(p, Serotonin_syndrome) => has_symptom(hyperthermia, p)
+0.184878    has_toxidrome(p, Serotonin_syndrome) => has_symptom(diaphoresis, p)
+0.000000    has_toxidrome(p, Anticholinergic) => !has_toxidrome(p, Cholinergic)
+0.237347    has_toxidrome(p, Opioid) => has_toxidrome(p, Sedative_hypnotic)
+has_symptom(tachycardia, p) => !has_symptom(bradycardia, p).
+has_symptom(tachypnea, p) => !has_symptom(bradypnea, p).
+has_symptom(mydriasis, p) => !has_symptom(miosis, p).
+has_symptom(increased_bowel_sounds, p) => !has_symptom(decreased_bowel_sounds, p).
+has_symptom(diaphoresis, p) => !has_symptom(dry_skin, p).
+has_symptom(hyperthermia, p) => !has_symptom(hypothermia, p).
+has_symptom(hypotension, p) => !has_symptom(hypertension, p).

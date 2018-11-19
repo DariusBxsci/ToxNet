@@ -1,0 +1,89 @@
+//version with unary predicates
+
+/*
+//domain declarations
+toxidrome = {Sympathomimetic, Anticholinergic, Cholinergic, Opioid, Sedative_hypnotic, Serotonin_syndrome}
+symptom = {Tachycardia, Hypertension, Bradycardia, Mydriasis, Increased_bowel_sounds, Tachypnea, Bradypnea, Hyperthermia, Diaphoresis, Dry_skin, Miosis, Decreased_bowel_sounds, Hypotension, Hypothermia, Clonus, Hyperreflexia}
+*/
+
+//predicate declarations 
+sympathomimetic(p)
+anticholinergic(p)
+cholinergic(p)
+opioid(p)
+sedative_hypnotic(p)
+serotonin_syndrome(p)
+
+tachycardia(p)
+hypertension(p)
+bradycardia(p)
+mydriasis(p)
+tachypnea(p)
+increased_bowel_sounds(p)
+bradypnea(p)
+hyperthermia(p)
+diaphoresis(p)
+dry_skin(p)
+miosis(p)
+decreased_bowel_sounds(p)
+hypotension(p)
+hypothermia(p)
+clonus(p)
+hyperreflexia(p)
+
+
+//Sympathomimetic Toxidrome
+0 sympathomimetic(p) ^ tachycardia(p)
+0.8 sympathomimetic(p) ^ tachypnea(p)
+0.8 sympathomimetic(p) ^ hypertension(p)
+0.8 sympathomimetic(p) ^ mydriasis(p)
+0.8 sympathomimetic(p) ^ increased_bowel_sounds(p)
+0.8 sympathomimetic(p) ^ hyperthermia(p)
+0.8 sympathomimetic(p) ^ diaphoresis(p)
+
+//Anticholinergic Toxidrome
+0 anticholinergic(p) ^ tachycardia(p)
+6 anticholinergic(p) ^ mydriasis(p)
+0.5 anticholinergic(p) ^ decreased_bowel_sounds(p)
+0 anticholinergic(p) ^ hyperthermia(p)
+0.5 anticholinergic(p) ^ dry_skin(p)
+
+//Cholinergic Toxidrome
+0.8 cholinergic(p) ^ bradycardia(p)
+0.5 cholinergic(p) ^ miosis(p)
+0.5 cholinergic(p) ^ increased_bowel_sounds(p)
+0.5 cholinergic(p) ^ diaphoresis(p)
+
+//Opioid Toxidrome
+0 opioid(p) ^ bradypnea(p)
+0 opioid(p) ^ miosis(p)
+0.8 opioid(p) ^ decreased_bowel_sounds(p)
+0.8 opioid(p) ^ hyperthermia(p)
+0.8 opioid(p) ^ dry_skin(p)
+
+//Sedative-Hypnotic Toxidrome
+0 sedative_hypnotic(p) ^ bradypnea(p)
+0.8 sedative_hypnotic(p) ^ decreased_bowel_sounds(p)
+
+//Sympathomimetic Toxidrome
+0.8 serotonin_syndrome(p) ^ tachycardia(p)
+0.8 serotonin_syndrome(p) ^ hyperreflexia(p)
+0 serotonin_syndrome(p) ^ clonus(p) //sine que non
+0.8 serotonin_syndrome(p) ^ hypertension(p)
+0.8 serotonin_syndrome(p) ^ mydriasis(p)
+0.8 serotonin_syndrome(p) ^ increased_bowel_sounds(p)
+0.8 serotonin_syndrome(p) ^ hyperthermia(p)
+0.8 serotonin_syndrome(p) ^ diaphoresis(p)
+
+//higher-order reasoning 
+0 anticholinergic(p) ^ !cholinergic(p)
+0 opioid(p) ^ sedative_hypnotic(p)
+
+//symptom closures
+0 !tachycardia(p) v !bradycardia(p)
+0 !tachypnea(p) v !bradypnea(p)
+0 !mydriasis(p) v !miosis(p)
+0 !increased_bowel_sounds(p) v !deceased_bowel_sounds(p)
+0 !diaphoresis(p) v !dry_skin(p)
+0 !hyperthermia(p) v !hypothermia(p)
+0 !hypotension(p) v !hypertension(p)

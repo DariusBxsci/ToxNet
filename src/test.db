@@ -1,0 +1,23 @@
+has_symptom(tachycardia,Bob)
+has_symptom(hypertension,Bob)
+has_symptom(mydraisis,Bob)
+has_symptom(increased_bowel_sounds,Bob)
+has_symptom(hyperthemia,Bob)
+has_symptom(diaphoresis,Bob)
+has_toxidrome(Bob, sympathomimetic)
+
+has_symptom(bradycardia,Alice)
+has_symptom(miosis,Alice)
+has_symptom(increased_bowel_sounds,Alice)
+has_symptom(diaphoresis,Alice)
+has_toxidrome(Alice, cholinergic)
+
+has_symptom(tachycardia,Charlie)
+has_symptom(hypertension,Charlie)
+has_symptom(mydraisis,Charlie)
+has_symptom(decreased_bowel_sounds,Charlie)
+has_symptom(hyperthemia,Charlie)
+has_symptom(dry_skin,Charlie)
+has_toxidrome(Charlie, anticholinergic)
+
+
