@@ -51,7 +51,6 @@ has_toxidrome(p, Serotonin_syndrome) => has_symptom(clonus,p). //sine que non
 has_toxidrome(p, Anticholinergic) => !has_toxidrome(p, Cholinergic).
 1 has_toxidrome(p, Opioid) => has_toxidrome(p, Sedative_hypnotic)
 
-
 //symptom closures
 has_symptom(tachycardia, p) => !has_symptom(bradycardia, p).
 has_symptom(tachypnea, p) => !has_symptom(bradypnea, p).
